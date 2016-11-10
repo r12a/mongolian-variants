@@ -74,6 +74,7 @@ table.formtable { clear: both; }
 table td { background-color: white; }
 .formtable td { border: 1px solid #ddd; }
 .formtable td.gap { border: 0; }
+.formtable td.vgap { border: 0; line-height: 1; }
 .formtable th.gap { background-color: transparent; }
 .formtable th { text-align:center; }
 table.formtable td[lang='mn'] { 
@@ -89,7 +90,8 @@ table.formtable td[lang='mn'] {
 	padding: 8px;
 	text-align: start;
 	}
-.gap { border: 0px; width: 10px; background-color: #FDFADF; border: 0; }
+.gap { border: 0; width: 10px; background-color: #FDFADF;  }
+.vgap { border: 0; height: 10px; background-color: #FDFADF;  }
 td.conflict { background-color: red; background-color: brown; color: white; font-weight: 500; }
 td.fconflict { background-color: #F6A355; color: white; font-weight: 500; }
 td.okdiff { background-color: #6F9; color: gray; font-weight: 500; }
