@@ -6,16 +6,16 @@
 <meta name="description" content="Notes about characters in the Unicode Mongolian script block."/>
     
 
-<link rel="stylesheet" href="/style/docs.css" type="text/css" />
-<link rel="stylesheet" href="/scripts/block/block-style.css" type="text/css" />
+<link rel="stylesheet" href="../shared/style/docs.css" type="text/css" />
+<link rel="stylesheet" href="../r12a.github.io/scripts/block/block-style.css" type="text/css" />
 <link rel="stylesheet" type="text/css" href="local.css" />
-<script type="text/javascript" src="/scripts/block/mongolian-names-subset.js"></script>
-<script type="text/javascript" src="/scripts/block/block-code.js"></script>
-<script type="text/javascript" src="fonts.js"></script>
+<script type="text/javascript" src="../r12a.github.io/scripts/block/mongolian-names-subset.js"></script>
+<script type="text/javascript" src="../r12a.github.io/scripts/block/block-code.js"></script>
+<script type="text/javascript" src="../r12a.github.io/scripts/mongolian/fonts.js"></script>
 
-<script type="text/javascript" src="/code/toc_section.js"></script>
-<script type="text/javascript" src="/code/boilerplate.js"></script>
-<script type="text/javascript" src="/uniview/scriptGroups.js"></script>
+<script type="text/javascript" src="../shared/code/toc_2016.js"></script>
+<script type="text/javascript" src="../shared/code/boilerplate.js"></script>
+<script type="text/javascript" src="../uniview/scriptGroups.js"></script>
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <script type="text/javascript">
@@ -98,10 +98,10 @@ function showComparisonLists (showhide) {
 <body>
 <header>
 <div id="header-boilerplate"></div>
-<script>document.getElementById('header-boilerplate').innerHTML = bp_header('/images/world.gif','docs');</script>
+<script>document.getElementById('header-boilerplate').innerHTML = bp_header('../shared/images/world.gif','docs');</script>
 </header>
 
-<h1>Notes on Mongolian variant forms</h1>
+<h1> Mongolian variant forms</h1>
 
 <aside class="sidebar">
   <h2 class="notoc flush"><a id="tochead">Contents</a></h2>
@@ -167,8 +167,11 @@ Use <label><input type="radio" value="zwj" checked="checked" name="connector"/> 
 	<p>The other factor in this is what the actual fonts do. Sometimes they follow the Unicode standardised variants list, other times they diverge from it. Occasionally a majority of implementations appear to diverge in the same way, suggesting that the standardised list should be adapted to reality. <strong>The page you are reading shows the latest proposed shapes for positional and variant forms of Mongolian characters and what the major fonts currently produce.</strong></p>
 	<p>This page also highlight differences between earlier proposals and the current proposals (see below).</p>
   <h3>How to use the document</h3>
-<p>For each Mongolian script letter, this page shows graphics to indicate the shape of a character in a given context (described in the left column). The graphics are standardised, and do not represent the actual font glyph shape.</p>
-<p>The columns to the right indicate the shapes produced by various fonts. See below for a key to the abbreviations used.</p>
+<p>For each Mongolian script letter, this page shows graphics to indicate the shape of a character in a given context (described in the left column). The graphics are standardised, and do not represent the actual font glyph shape produced by a particular font.</p>
+<h4>The <samp>NP</samp> column</h4>
+<p>The <samp>NP</samp> column shows the latest consensus from discussions on public-i18n-mongolian@w3.org on what should be the result of a particular contextual or variant use of a character in the Mongolian script.</p>
+<h4>The font columns</h4>
+<p>The columns to the right of the NP column indicate the shapes produced by various fonts. See below for a key to the abbreviations used.</p>
 <p>Character images are sometimes surrounded by a coloured border with the following meanings:</p>
 <ul>
   <li><span class="conflict">brown</span> in spec columns: the character doesn't match the shape of the latest proposal.</li>
@@ -183,7 +186,9 @@ Use <label><input type="radio" value="zwj" checked="checked" name="connector"/> 
 
   <h4>Changing fonts and other display features</h4>
 
-<p>The vertical blue line at the bottom right of the window opens, when you click on it, to show a font control panel. When it is open, you can apply a specific font to the text in the right-hand column by selecting it from the top pull-down menu in this control panel. </p>
+<p>The right-most column of each table displays a mongolian character or sequence of characters so that you can see how your browser displays it.</p>
+<p>You can can various parameters here, such as the font and font size, by using the controls behind the vertical blue line at the bottom right of the browser window. Click on the blue line to reveal or hide the controls.</p>
+<p> When it is open, you can apply a specific font to the text in the right-hand column by selecting it from the top pull-down menu in this control panel. </p>
 <p>If the font you want to test is not available in the list selector, click on 'Add a font to these lists' (found below the two list selectors in the control panel just mentioned) and <strong>enter the name of the font</strong> you want to add in the dialog box that appears. The font name will be added to the selection  controls. Open the top list selector again, and click on the name of the font to apply it to the text in the right column. (Fonts you add to a list selector only stay on the  list for the duration of the session.)</p>
 <p>In the text column I use <span class="uname">U+200D   ZERO WIDTH JOINER</span> by default to establish the context for connecting characters. By clicking on the radio button in the font dialog box, you can <strong>change the connector</strong> to <span class="uname">U+180A MONGOLIAN NIRUGU</span>. </p>
 <p>The CSS for the text column also attempts to apply <strong>vertical text orientation</strong> to the characters. In some Firefox v38 the resulting display may clip some glyphs. By clicking on the radio button in the font dialog box, you can change the direction to horizontal. This may resolve the display problem. The switch only works for Firefox and Chrome browsers.</p>
@@ -380,7 +385,9 @@ Use <label><input type="radio" value="zwj" checked="checked" name="connector"/> 
 <div class="unicodenotes">→ (cyrillic small letter a - 0430)<br/>~ 1820 180B second form (isolate)<br/>~ 1820 180B second form (medial)<br/>~ 1820 180B second form (final)<br/>~ 1820 180C third form (medial)</div>
 <div class="notes">
 	<table class="formtable"><tbody>
-    <tr><th>form</th><th class="referencelists">Q</th><th class="referencelists">USVL</th><th>NP</th>
+    <tr><th>form</th><th class="referencelists">Q</th><th class="referencelists">USVL</th>
+      <th>CD2</th>
+      <th>NP</th>
       <th class="gap">&nbsp;</th>
       <th>MB</th>
       <th>FZ</th>
@@ -390,131 +397,290 @@ Use <label><input type="radio" value="zwj" checked="checked" name="connector"/> 
       <th>MS</th>
       <th>Text</th>
     </tr>
-    <tr>
+    <tr id="1820s">
       <td>isolate</td>
-      <td class="referencelists"><img src="v/1820s.png" alt=""/></td>
+      <td class="referencelists"><img src="i/i001.png" alt=""/></td>
       <td class="referencelists">&nbsp;</td>
-      <td><img src="v/1820s.png" alt=""/></td>
+      <td><span class="referencelists"><img src="i/i001.png" alt=""/></span></td>
+      <td><span class="referencelists"><img src="i/i001.png" alt=""/></span></td>
       <td class="gap">&nbsp;</td>
-      <td><img src="v/1820s.png" alt=""/></td>
-      <td><img src="v/1820s.png" alt=""/></td>
-      <td><img src="v/1820s.png" alt=""/></td>
-      <td><img src="v/1820s.png" alt=""/></td>
-      <td><img src="v/1820s.png" alt=""/></td>
-      <td><img src="v/1820s.png" alt=""/></td>
+      <td><span class="referencelists"><img src="i/i001.png" alt=""/></span></td>
+      <td><span class="referencelists"><img src="i/i001.png" alt=""/></span></td>
+      <td><span class="referencelists"><img src="i/i001.png" alt=""/></span></td>
+      <td><span class="referencelists"><img src="i/i001.png" alt=""/></span></td>
+      <td><span class="referencelists"><img src="i/i001.png" alt=""/></span></td>
+      <td><span class="referencelists"><img src="i/i001.png" alt=""/></span></td>
       <td lang="mn"><div>&#x1820;&nbsp;</div></td>
     </tr>
-    <tr>
+    <tr id="1820s1">
       <td>is+fvs1</td>
-      <td class="referencelists"><img src="v/1820s1.png" alt=""/></td>
-      <td class="referencelists"><img src="v/1820s1.png" alt=""/></td>
-      <td><img src="v/1820s1.png" alt=""/></td>
+      <td class="referencelists"><img src="i/i015.png" alt=""/></td>
+      <td class="referencelists"><img src="i/i015.png" alt=""/></td>
+      <td><img src="i/i015.png" alt=""/></td>
+      <td><img src="i/i015.png" alt=""/></td>
       <td class="gap">&nbsp;</td>
-      <td><img src="v/1820s1.png" alt=""/></td>
-      <td><img src="v/1820s1.png" alt=""/></td>
-      <td><img src="v/1820s1.png" alt=""/></td>
-      <td><img src="v/1820s1.png" alt=""/></td>
-      <td><img src="v/1820s1.png" alt=""/></td>
-      <td><img src="v/1820s1.png" alt=""/></td>
+      <td><img src="i/i015.png" alt=""/></td>
+      <td><img src="i/i015.png" alt=""/></td>
+      <td><img src="i/i015.png" alt=""/></td>
+      <td><img src="i/i015.png" alt=""/></td>
+      <td><img src="i/i015.png" alt=""/></td>
+      <td><img src="i/i015.png" alt=""/></td>
       <td lang="mn">&#x1820;&#x180B;</td>
     </tr>
-    <tr>
-      <td>initial</td>
-      <td class="referencelists"><img src="v/1820i.png" alt=""/></td>
+    <tr id="1820s2">
+      <td>is+fvs2</td>
       <td class="referencelists">&nbsp;</td>
-      <td><img src="v/1820i.png" alt=""/></td>
+      <td class="referencelists">&nbsp;</td>
+      <td><img src="i/i016.png" alt="" class="conflict"/></td>
+      <td class="fvsmismatch">n/s</td>
       <td class="gap">&nbsp;</td>
-      <td><img src="v/1820i.png" alt=""/></td>
-      <td><img src="v/1820i.png" alt=""/></td>
-      <td><img src="v/1820i.png" alt=""/></td>
-      <td><img src="v/1820i.png" alt=""/></td>
-      <td><img src="v/1820i.png" alt=""/></td>
-      <td><img src="v/1820i.png" alt=""/></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td lang="mn">&#x1820;&#x180C;</td>
+    </tr>
+    <tr id="1820i">
+      <td>initial</td>
+      <td class="referencelists"><img src="i/i028.png" alt=""/></td>
+      <td class="referencelists">&nbsp;</td>
+      <td><img src="i/i028.png" alt=""/></td>
+      <td><img src="i/i028.png" alt=""/></td>
+      <td class="gap">&nbsp;</td>
+      <td><img src="i/i028.png" alt=""/></td>
+      <td><img src="i/i028.png" alt=""/></td>
+      <td><img src="i/i028.png" alt=""/></td>
+      <td><img src="i/i028.png" alt=""/></td>
+      <td><img src="i/i028.png" alt=""/></td>
+      <td><img src="i/i028.png" alt=""/></td>
       <td lang="mn">&#x1820;&#x200D;</td>
     </tr>
     <tr>
       <td class="agreed">in+fvs1</td>
       <td class="referencelists">&nbsp;</td>
       <td class="referencelists">&nbsp;</td>
+      <td><img src="i/i256.png" alt="" class="conflict"/></td>
       <td class="fvsmismatch">n/s</td>
       <td class="gap">&nbsp;</td>
-      <td><img src="v/1820i.png" alt=""/></td>
-      <td><img src="v/1820i.png" alt=""/></td>
-      <td><img src="v/1820i1.png" alt=""/></td>
-      <td><img src="v/1820i1.png" alt=""/></td>
-      <td><img src="v/1820i1.png" alt=""/></td>
-      <td><img src="v/1820i1.png" alt=""/></td>
+      <td><img src="i/i028.png" alt=""/></td>
+      <td><img src="i/i028.png" alt=""/></td>
+      <td><img src="i/i025.png" alt=""/></td>
+      <td><img src="i/i025.png" alt=""/></td>
+      <td><img src="i/i025.png" alt=""/></td>
+      <td><img src="i/i025.png" alt=""/></td>
       <td lang="mn">&#x1820;&#x180B;&#x200D;</td>
     </tr>
     <tr>
       <td>medial</td>
-      <td class="referencelists"><img src="v/1820m.png" alt=""/></td>
+      <td class="referencelists"><img src="i/i032.png" alt=""/></td>
       <td class="referencelists">&nbsp;</td>
-      <td><img src="v/1820m.png" alt=""/></td>
+      <td><img src="i/i032.png" alt=""/></td>
+      <td><img src="i/i032.png" alt=""/></td>
       <td class="gap">&nbsp;</td>
-      <td><img src="v/1820m.png" alt=""/></td>
-      <td><img src="v/1820m.png" alt=""/></td>
-      <td><img src="v/1820m.png" alt=""/></td>
-      <td><img src="v/1820m.png" alt=""/></td>
-      <td><img src="v/1820m.png" alt=""/></td>
-      <td><img src="v/1820m.png" alt=""/></td>
+      <td><img src="i/i032.png" alt=""/></td>
+      <td><img src="i/i032.png" alt=""/></td>
+      <td><img src="i/i032.png" alt=""/></td>
+      <td><img src="i/i032.png" alt=""/></td>
+      <td><img src="i/i032.png" alt=""/></td>
+      <td><img src="i/i032.png" alt=""/></td>
       <td lang="mn">&#x200D;&#x1820;&#x200D;</td>
     </tr>
     <tr>
       <td>m+fvs1</td>
-      <td class="referencelists"><img src="v/1820m1.png" alt=""/></td>
-      <td class="referencelists"><img src="v/1820m1.png" alt=""/></td>
-      <td><img src="v/1820m1.png" alt=""/></td>
+      <td class="referencelists"><img src="i/i057.png" alt=""/></td>
+      <td class="referencelists"><img src="i/i057.png" alt=""/></td>
+      <td><img src="i/i057.png" alt=""/></td>
+      <td><img src="i/i057.png" alt=""/></td>
       <td class="gap">&nbsp;</td>
-      <td><img src="v/1820m1.png" alt=""/></td>
-      <td><img src="v/1820m1.png" alt=""/></td>
-      <td><img src="v/1820m1.png" alt=""/></td>
-      <td><img src="v/1820m1.png" alt=""/></td>
-      <td><img src="v/1820m1.png" alt=""/></td>
-      <td><img src="v/1820m1.png" alt=""/></td>
+      <td><img src="i/i057.png" alt=""/></td>
+      <td><img src="i/i057.png" alt=""/></td>
+      <td><img src="i/i057.png" alt=""/></td>
+      <td><img src="i/i057.png" alt=""/></td>
+      <td><img src="i/i057.png" alt=""/></td>
+      <td><img src="i/i057.png" alt=""/></td>
       <td lang="mn">&#x200D;&#x1820;&#x180B;&#x200D;</td>
     </tr>
     <tr>
-      <td class=agreed>m+fvs2</td>
-      <td class="referencelists"><img src="v/1820i1.png" alt=""/></td>
-      <td class="referencelists"><img src="v/1820i1.png" alt=""/></td>
-      <td><img src="v/1820i1.png" alt=""/></td>
+      <td class="agreed">m+fvs2</td>
+      <td class="referencelists"><img src="i/i025.png" alt=""/></td>
+      <td class="referencelists"><img src="i/i025.png" alt=""/></td>
+      <td><img src="i/i025.png" alt=""/></td>
+      <td><img src="i/i025.png" alt=""/></td>
       <td class="gap">&nbsp;</td>
-      <td><img src="v/1820i1.png" alt=""/></td>
-      <td><img src="v/1820i1.png" alt=""/></td>
-      <td><img src="v/1820i1.png" alt=""/></td>
-      <td><img src="v/1820m.png" alt="" class="fconflict"/></td>
-      <td><img src="v/1820i1.png" alt=""/></td>
-      <td><img src="v/1820m.png" alt="" class="fconflict"/></td>
+      <td><img src="i/i025.png" alt=""/></td>
+      <td><img src="i/i025.png" alt=""/></td>
+      <td><img src="i/i025.png" alt=""/></td>
+      <td><img src="i/i032.png" alt="" class="fconflict"/></td>
+      <td><img src="i/i025.png" alt=""/></td>
+      <td><img src="i/i032.png" alt="" class="fconflict"/></td>
       <td lang="mn">&#x200D;&#x1820;&#x180C;&#x200D;</td>
     </tr>
     <tr>
-      <td>final</td>
-      <td class="referencelists"><img src="v/1820f.png" alt=""/></td>
+      <td>m+fvs3</td>
       <td class="referencelists">&nbsp;</td>
-      <td><img src="v/1820f.png" alt=""/></td>
+      <td class="referencelists">&nbsp;</td>
+      <td><img src="i/i064.png" alt=""/></td>
+      <td class="fvsmismatch">n/s</td>
       <td class="gap">&nbsp;</td>
-      <td><img src="v/1820f.png" alt=""/></td>
-      <td><img src="v/1820f.png" alt=""/></td>
-      <td><img src="v/1820f.png" alt=""/></td>
-      <td><img src="v/1820f.png" alt=""/></td>
-      <td><img src="v/1820f.png" alt=""/></td>
-      <td><img src="v/1820f.png" alt=""/></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td lang="mn">&#x200D;&#x1820;&#x180D;&#x200D;</td>
+    </tr>
+    <tr>
+      <td>m+VS1</td>
+      <td class="referencelists">&nbsp;</td>
+      <td class="referencelists">&nbsp;</td>
+      <td><img src="i/i257.png" alt=""/></td>
+      <td class="fvsmismatch">n/s</td>
+      <td class="gap">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td lang="mn">&#x200D;&#x1820;&#xFE00;&#x200D;</td>
+    </tr>
+    <tr>
+      <td>m+VS2</td>
+      <td class="referencelists">&nbsp;</td>
+      <td class="referencelists">&nbsp;</td>
+      <td><img src="i/i038.png" alt=""/></td>
+      <td class="fvsmismatch">n/s</td>
+      <td class="gap">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td lang="mn">&#x200D;&#x1820;&#xFE01;&#x200D;</td>
+    </tr>
+    <tr>
+      <td>final</td>
+      <td class="referencelists"><img src="i/i002.png" alt=""/></td>
+      <td class="referencelists">&nbsp;</td>
+      <td><span class="referencelists"><img src="i/i002.png" alt=""/></span></td>
+      <td><span class="referencelists"><img src="i/i002.png" alt=""/></span></td>
+      <td class="gap">&nbsp;</td>
+      <td><span class="referencelists"><img src="i/i002.png" alt=""/></span></td>
+      <td><span class="referencelists"><img src="i/i002.png" alt=""/></span></td>
+      <td><span class="referencelists"><img src="i/i002.png" alt=""/></span></td>
+      <td><span class="referencelists"><img src="i/i002.png" alt=""/></span></td>
+      <td><span class="referencelists"><img src="i/i002.png" alt=""/></span></td>
+      <td><span class="referencelists"><img src="i/i002.png" alt=""/></span></td>
       <td lang="mn">&#x200D;&#x1820;</td>
     </tr>
     <tr>
       <td>f+fvs1</td>
-      <td class="referencelists"><img src="v/1820f1.png" alt=""/></td>
-      <td class="referencelists"><img src="v/1820f1.png" alt=""/></td>
-      <td><img src="v/1820f1.png" alt=""/></td>
+      <td class="referencelists"><img src="i/i024.png" alt=""/></td>
+      <td class="referencelists"><img src="i/i024.png" alt=""/></td>
+      <td><img src="i/i024.png" alt=""/></td>
+      <td><img src="i/i024.png" alt=""/></td>
       <td class="gap">&nbsp;</td>
-      <td><img src="v/1820f1.png" alt=""/></td>
-      <td><img src="v/1820f1.png" alt=""/></td>
-      <td><img src="v/1820f1.png" alt=""/></td>
-      <td><img src="v/1820f1.png" alt=""/></td>
-      <td><img src="v/1820f1.png" alt=""/></td>
-      <td><img src="v/1820f1.png" alt=""/></td>
+      <td><img src="i/i024.png" alt=""/></td>
+      <td><img src="i/i024.png" alt=""/></td>
+      <td><img src="i/i024.png" alt=""/></td>
+      <td><img src="i/i024.png" alt=""/></td>
+      <td><img src="i/i024.png" alt=""/></td>
+      <td><img src="i/i024.png" alt=""/></td>
       <td lang="mn">&#x200D;&#x1820;&#x180B;</td>
+    </tr>
+    <tr>
+      <td>f+fvs2</td>
+      <td class="referencelists">&nbsp;</td>
+      <td class="referencelists">&nbsp;</td>
+      <td><img src="i/i098.png" alt=""/></td>
+      <td class="fvsmismatch">n/s</td>
+      <td class="gap">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td lang="mn">&#x200D;&#x1820;&#x180C;</td>
+    </tr>
+    <tr>
+      <td>f+fvs3</td>
+      <td class="referencelists">&nbsp;</td>
+      <td class="referencelists">&nbsp;</td>
+      <td><img src="i/i258.png" alt=""/></td>
+      <td class="fvsmismatch">n/s</td>
+      <td class="gap">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td lang="mn">&#x200D;&#x1820;&#x180D;</td>
+    </tr>
+    <tr>
+      <td>f+VS1</td>
+      <td class="referencelists">&nbsp;</td>
+      <td class="referencelists">&nbsp;</td>
+      <td><img src="i/i259.png" alt=""/></td>
+      <td class="fvsmismatch">n/s</td>
+      <td class="gap">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td lang="mn">&#x200D;&#x1820;&#xFE00;</td>
+    </tr>
+    <tr>
+      <td>f+VS2</td>
+      <td class="referencelists">&nbsp;</td>
+      <td class="referencelists">&nbsp;</td>
+      <td><img src="i/i260.png" alt=""/></td>
+      <td class="fvsmismatch">n/s</td>
+      <td class="gap">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td lang="mn">&#x200D;&#x1820;&#xFE01;</td>
+    </tr>
+    <tr>
+      <td>f+VS3</td>
+      <td class="referencelists">&nbsp;</td>
+      <td class="referencelists">&nbsp;</td>
+      <td><img src="i/i261.png" alt=""/></td>
+      <td class="fvsmismatch">n/s</td>
+      <td class="gap">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td lang="mn">&#x200D;&#x1820;&#xFE02;</td>
+    </tr>
+    <tr>
+      <td>f+VS4</td>
+      <td class="referencelists">&nbsp;</td>
+      <td class="referencelists">&nbsp;</td>
+      <td><img src="i/i262.png" alt=""/></td>
+      <td class="fvsmismatch">n/s</td>
+      <td class="gap">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td lang="mn">&#x200D;&#x1820;&#xFE03;</td>
     </tr>
     
     </tbody>
@@ -527,7 +693,7 @@ Use <label><input type="radio" value="zwj" checked="checked" name="connector"/> 
       </div>
 	  <p><strong>Other notes:</strong> </p>
 	  <p>	The glyph produced is the same as is produced for the suffix <img class="ex" lang="mn" src="images/aca.png" alt="ᠠᠴᠠ"/> for all the fonts tested.</p>
-	  <p>Notes from Greg Eck about m+fvs2: &quot;The only place where the single tooth initial 1820 is used is with the masculine ablative suffix . Given the standard NNBSP model, this is an initial position and not a medial position. My thoughts here are similar to the 1836 final situation – the spec called for a medial. Font implementers created the 1820 medial+fvs. The display at standalone produced the desired effect – you could view the single tooth initial. Implementation went on to test in context. The implementation did not work. The contextual implementation was placed at initial position. The fvs stand-alone display was left at the medial position resulting in a mis-match of the stand-alone with the contextual implementation. If this is correct, then I suggest that the medial+fvs2 spec be dropped and the initial+fvs1 spec be added for the single tooth initial  <img src="v/1820i1.png" alt=""/>.&quot;</p>
+	  <p>Notes from Greg Eck about m+fvs2: &quot;The only place where the single tooth initial 1820 is used is with the masculine ablative suffix . Given the standard NNBSP model, this is an initial position and not a medial position. My thoughts here are similar to the 1836 final situation – the spec called for a medial. Font implementers created the 1820 medial+fvs. The display at standalone produced the desired effect – you could view the single tooth initial. Implementation went on to test in context. The implementation did not work. The contextual implementation was placed at initial position. The fvs stand-alone display was left at the medial position resulting in a mis-match of the stand-alone with the contextual implementation. If this is correct, then I suggest that the medial+fvs2 spec be dropped and the initial+fvs1 spec be added for the single tooth initial  <img src="i/i0281.png" alt=""/>.&quot;</p>
 	  <p>&quot;One more point that might be considered – if the ablative suffix ACA/ECE was indeed being processed in the medial position, then one would expect there to be a glyph for this at the 1821-E medial slot. There is none.&quot;</p>
 	</div>
 </div>
@@ -13096,7 +13262,7 @@ Use <label><input type="radio" value="zwj" checked="checked" name="connector"/> 
 <div id="panel" style="display:none"></div>
 
 <div class="smallprint"><span id="version">First published  21 Sep 2014.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2016-09-09  15:36<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2016-11-10  18:25<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 
 <script type="text/javascript">
