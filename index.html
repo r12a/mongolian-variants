@@ -167,11 +167,13 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
 <p id="status">Updated Sat 12 Nov  2016  &bull; tags <a href="http://rishida.net/blog/index.php?tag=mongolian" title="Show all blog posts tagged with 'mongolian'">mongolian</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 <section>
   <p>There is some confusion about which shapes fonts should  produce for Mongolian characters when combined with Free Variation Selectors (FVS), and sometimes also when not. Most letters have at least one isolated, initial, medial and final shape, but other shapes are produced by contextual factors, such as vowel harmony. Free variation selectors allow you to produce specific shapes regardless of rules in fonts or rendering software.</p>
+  <p>The other factor in this is what the actual fonts do. Sometimes they follow the Unicode standardised variants list, other times they diverge from it. Occasionally a majority of implementations appear to diverge in the same way, suggesting that the standardised list should be adapted to reality. </p>
+  <p><strong>The page you are reading shows the latest proposed shapes for positional and variant forms of Mongolian characters and what the major fonts currently produce.</strong></p>
+  <h3>Background</h3>
   <p>Unicode <strong></strong>has a <a href="http://www.unicode.org/Public/UNIDATA/StandardizedVariants.html">list of standardised variant shapes</a>, dating from 27 November 2013, but that list is not complete and contains what are currently viewed by some as errors.</p>
-  <p>A <a href="http://www.unicode.org/L2/L2014/14031-mong-chart-upd.pdf">new proposal (L2/14-031)</a> was published on 20 January 2014, which attempted to resolve the current issues. The data in the <samp>NP</samp> columns in this document is derived from significant revisions of that  proposal, arrived at through discussion with the major Mongolian font vendors and Mongolian script experts. <a href="https://w3c.github.io/mlreq/variants/ds01.pdf">The document called DS01</a> captures the results of that work and constitutes the newest set of proposals for Unicode.</p>
+  <p>A <a href="http://www.unicode.org/L2/L2014/14031-mong-chart-upd.pdf">new proposal (L2/14-031)</a> was published on 20 January 2014, which attempted to resolve the current issues. The data in the <samp>NP</samp> columns in this document is derived from <strong>significant revisions</strong> of that  proposal, arrived at through discussion with the major Mongolian font vendors and Mongolian script experts. <a href="https://w3c.github.io/mlreq/variants/ds01.pdf">The document called DS01</a> captures the results of that work and constitutes the newest set of proposals for Unicode.</p>
   <p>The  differences are being discussed by Mongolian experts on the public-i18n-mongolian list (see <a href="http://lists.w3.org/Archives/Public/public-i18n-mongolian/">the archive</a>). There is also a <a href="http://w3c.github.io/mlreq/variants/document-log.html">document log</a> for these discussions.</p>
-  <p>The other factor in this is what the actual fonts do. Sometimes they follow the Unicode standardised variants list, other times they diverge from it. Occasionally a majority of implementations appear to diverge in the same way, suggesting that the standardised list should be adapted to reality. <strong>The page you are reading shows the latest proposed shapes for positional and variant forms of Mongolian characters and what the major fonts currently produce.</strong></p>
-  <p>This page also highlight differences between earlier proposals and the current proposals (see below).</p>
+  <p>This page also shows the recommendations of a proposal following a meeting of Mongolian and Chinese experts with Greg Eck in October 2016, that builds on and integrates DS01 with new information. Differences between that proposal and the previous DS01 proposal are highlighted.</p>
   <h3>How to use the document</h3>
   <p>For each Mongolian script letter, this page shows graphics to indicate the shape of the character in a given context (described in the left column). The graphics are standardised, and do not represent the actual font glyph shape produced by a particular font.</p>
   <h4>The <samp>NP</samp> and <samp>WG2</samp> columns</h4>
@@ -15803,7 +15805,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
 </section>
 <div id="panel" style="display:none"></div>
 <div class="smallprint"><span id="version">First published  21 Sep 2014.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2016-11-13  10:50<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2016-11-13  11:08<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 <script type="text/javascript">
 createtoc()
