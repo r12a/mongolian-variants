@@ -164,7 +164,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
     </form>
   </div>
 </aside>
-<p id="status">Updated Mon 9 Sep  2016  &bull; tags <a href="http://rishida.net/blog/index.php?tag=mongolian" title="Show all blog posts tagged with 'mongolian'">mongolian</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
+<p id="status">Updated Sat 12 Nov  2016  &bull; tags <a href="http://rishida.net/blog/index.php?tag=mongolian" title="Show all blog posts tagged with 'mongolian'">mongolian</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 <section>
   <p>There is some confusion about which shapes fonts should  produce for Mongolian characters when combined with Free Variation Selectors (FVS), and sometimes also when not. Most letters have at least one isolated, initial, medial and final shape, but other shapes are produced by contextual factors, such as vowel harmony. Free variation selectors allow you to produce specific shapes regardless of rules in fonts or rendering software.</p>
   <p>Unicode <strong></strong>has a <a href="http://www.unicode.org/Public/UNIDATA/StandardizedVariants.html">list of standardised variant shapes</a>, dating from 27 November 2013, but that list is not complete and contains what are currently viewed by some as errors.</p>
@@ -173,15 +173,16 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
   <p>The other factor in this is what the actual fonts do. Sometimes they follow the Unicode standardised variants list, other times they diverge from it. Occasionally a majority of implementations appear to diverge in the same way, suggesting that the standardised list should be adapted to reality. <strong>The page you are reading shows the latest proposed shapes for positional and variant forms of Mongolian characters and what the major fonts currently produce.</strong></p>
   <p>This page also highlight differences between earlier proposals and the current proposals (see below).</p>
   <h3>How to use the document</h3>
-  <p>For each Mongolian script letter, this page shows graphics to indicate the shape of a character in a given context (described in the left column). The graphics are standardised, and do not represent the actual font glyph shape produced by a particular font.</p>
-  <h4>The <samp>NP</samp> column</h4>
+  <p>For each Mongolian script letter, this page shows graphics to indicate the shape of the character in a given context (described in the left column). The graphics are standardised, and do not represent the actual font glyph shape produced by a particular font.</p>
+  <h4>The <samp>NP</samp> and <samp>WG2</samp> columns</h4>
   <p>The <samp>NP</samp> column shows the latest consensus from discussions on public-i18n-mongolian@w3.org on what should be the result of a particular contextual or variant use of a character in the Mongolian script.</p>
+  <p>The column <samp>WG2</samp> represents the proposals in  <cite><a href="http://www.unicode.org/L2/L2016/16309-mongolian-adds.pdf">L2/16-309, Proposed additions for Mongolian in 5th edition of UCS</a></cite> (26 October, 2016). </p>
   <h4>The font columns</h4>
   <p>The columns to the right of the NP column indicate the shapes produced by various fonts. See below for a key to the abbreviations used.</p>
   <p>Character images are sometimes surrounded by a coloured border with the following meanings:</p>
   <ul>
     <li><span class="conflict">brown</span> in spec columns: the character doesn't match the shape of the latest proposal.</li>
-    <li><span class="chstandard">magenta</span> in the NP column: the final outcome is pending decisions made during the finalisation of the Chinese national standard in 2016.</li>
+    <li><span class="chstandard">magenta</span> in the WG2 column: the proposal in L2/16-309 is different from the latest proposal in DS01.</li>
     <li><span class="fconflict">orange</span> in the font columns: the shape produced for the font in question in that context doesn't match the latest proposal.</li>
     <li><span class="okdiff">green</span> in the font columns: although the glyph shape differs from the latest proposal, the glyph choice is thought to be a design decision because the letter is not actually used in a particular position, and the difference is probably not an issue.</li>
     <li><span class="fvsmismatch">grey</span> in the font columns: FVS mismatch.</li>
@@ -203,6 +204,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
   <p>To reveal that information, you need to click on the blue vertical bar at the bottom right of the window, then select <samp>Show</samp> under <samp>Q and USVL columns</samp>.</p>
   <section id="abbrevs">
     <h3>Abbreviations and fonts tested</h3>
+    <p><em>WG2</em>: <strong>Working Group 2 proposal</strong>, <strong>based on <cite><a href="http://www.unicode.org/L2/L2016/16309-mongolian-adds.pdf">L2/16-309, Proposed additions for Mongolian in 5th edition of UCS</a></cite> (26 October, 2016), which builds on DS01, and was produced during a meeting in Hohot.</p>
     <p><em>NP</em>: <strong>Newest proposal</strong>, <strong>based on <a href="https://w3c.github.io/mlreq/variants/ds01.pdf">the DS01 document</a></strong>, which is an update  to the Jan 2014 L2/14-031 proposal.  The information was supplied by Greg Eck and the aforementioned Mongolian script experts, and builds on work by him, Aaron Bell, and Andrew Glass.</p>
     <p><em>MB</em>: <strong>Mongolian Baiti</strong> font. This column shows results for two versions of Mongolian Baiti.  The base version is 5.51, in Edge on Windows 10. Where a cell contains two images, separated by  ≫ , the image to the right is for a pre-shipped version of Mongolian Baiti, which will be released in the future.</p>
     <p><em>FZ</em>: <strong>FangZhen</strong> font. Information provided by Greg Eck.</p>
@@ -269,7 +271,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CD2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -604,7 +606,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -882,7 +884,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -1069,7 +1071,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -1197,7 +1199,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -1400,7 +1402,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -1561,7 +1563,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -1804,7 +1806,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -1903,7 +1905,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -2156,7 +2158,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -2374,7 +2376,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -2480,7 +2482,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -2573,7 +2575,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -2866,7 +2868,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -3218,7 +3220,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -3306,7 +3308,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -3396,7 +3398,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -3526,7 +3528,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -3615,7 +3617,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -3727,7 +3729,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -3878,7 +3880,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -4018,7 +4020,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -4215,7 +4217,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -4414,7 +4416,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -4503,7 +4505,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -4639,7 +4641,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -4727,7 +4729,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -4819,7 +4821,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -4911,7 +4913,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -4999,7 +5001,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -5087,7 +5089,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -5175,7 +5177,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -5261,7 +5263,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -5368,7 +5370,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -5460,7 +5462,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -5560,7 +5562,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -5675,7 +5677,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -5812,7 +5814,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -5969,7 +5971,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -6114,7 +6116,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -6316,7 +6318,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -6489,7 +6491,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -6659,7 +6661,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -6755,7 +6757,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -6850,7 +6852,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -6939,7 +6941,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -7092,7 +7094,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -7287,7 +7289,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -7382,7 +7384,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -7468,7 +7470,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -7554,7 +7556,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -7640,7 +7642,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -7726,7 +7728,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -7812,7 +7814,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -7952,7 +7954,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -8077,7 +8079,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -8163,7 +8165,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -8258,7 +8260,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -8344,7 +8346,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -8434,7 +8436,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -8524,7 +8526,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -8670,7 +8672,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -8794,7 +8796,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -8941,7 +8943,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -9025,7 +9027,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -9168,7 +9170,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -9253,7 +9255,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -9340,7 +9342,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -9495,7 +9497,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -9652,7 +9654,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CD2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -9794,7 +9796,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -9921,7 +9923,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -10015,7 +10017,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -10164,7 +10166,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -10282,7 +10284,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -10363,7 +10365,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -10444,7 +10446,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -10535,7 +10537,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -10626,7 +10628,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -10710,7 +10712,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -10839,7 +10841,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -10924,7 +10926,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -11014,7 +11016,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -11113,7 +11115,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -11303,7 +11305,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -11524,7 +11526,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -11608,7 +11610,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -11736,7 +11738,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -11832,7 +11834,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -11891,7 +11893,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -11949,7 +11951,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -11990,7 +11992,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -12033,7 +12035,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -12076,7 +12078,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -12117,7 +12119,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -12163,7 +12165,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -12361,7 +12363,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -12487,7 +12489,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -12585,7 +12587,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -12719,7 +12721,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -12844,7 +12846,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -12930,7 +12932,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -13016,7 +13018,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -13141,7 +13143,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -13227,7 +13229,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -13313,7 +13315,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -13399,7 +13401,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -13563,7 +13565,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -13658,7 +13660,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -13744,7 +13746,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -13830,7 +13832,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -13916,7 +13918,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -14002,7 +14004,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -14088,7 +14090,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -14183,7 +14185,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -14299,7 +14301,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -14385,7 +14387,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -14482,7 +14484,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -14577,7 +14579,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -14663,7 +14665,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -14749,7 +14751,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -14878,7 +14880,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -15007,7 +15009,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -15102,7 +15104,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -15188,7 +15190,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -15322,7 +15324,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -15417,7 +15419,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -15521,7 +15523,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -15607,7 +15609,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -15702,7 +15704,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>form</th>
             <th class="referencelists">Q</th>
             <th class="referencelists">USVL</th>
-            <th>CR2</th>
+            <th>WG2</th>
             <th>NP</th>
             <th class="gap">&nbsp;</th>
             <th>MB</th>
@@ -15801,7 +15803,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
 </section>
 <div id="panel" style="display:none"></div>
 <div class="smallprint"><span id="version">First published  21 Sep 2014.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2016-11-13  10:23<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2016-11-13  10:50<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
 <script type="text/javascript">
 createtoc()
