@@ -1,3 +1,7 @@
+// one line for each character, indicating the primitives that point to it
+// order is that of the shape index (id's are just numbers)
+
+
 var t = []
 t[t.length] = { id: 32, primitives: "032" }
 t[t.length] = { id: 33, primitives: "032 901" }
@@ -148,6 +152,7 @@ t[t.length] = { id: 277, primitives: "152 228" }
 t[t.length] = { id: 234, primitives: "152 228" }
 t[t.length] = { id: 70, primitives: "066" }
 t[t.length] = { id: 263, primitives: "066 901" }
+t[t.length] = { id: 71, primitives: "066" }
 t[t.length] = { id: 305, primitives: "066 903" }
 t[t.length] = { id: 81, primitives: "066 902" }
 t[t.length] = { id: 82, primitives: "066" }
@@ -170,7 +175,7 @@ t[t.length] = { id: 336, primitives: "089 901 903" }
 t[t.length] = { id: 90, primitives: "089 902" }
 t[t.length] = { id: 92, primitives: "089 901" }
 t[t.length] = { id: 109, primitives: "109" }
-t[t.length] = { id: 109, primitives: "109" }
+t[t.length] = { id: 351, primitives: "109" }
 t[t.length] = { id: 266, primitives: "109 110 901" }
 t[t.length] = { id: 111, primitives: "109 907" }
 t[t.length] = { id: 112, primitives: "109 901" }
