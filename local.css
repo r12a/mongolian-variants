@@ -123,3 +123,19 @@ td.fvsmismatch { border: 3px solid #aaa; }
 	display: none;
 	opacity: .3;
 	}
+summary {
+    margin-left: 7.5%;
+    margin-right: 32%;
+    cursor: pointer;
+}
+.character summary {
+    margin-right: 5%;
+    margin-left: 7.5%;
+    cursor: pointer;
+    margin-bottom: 1em;
+	font-style: italic;
+	}
+.formtable td:first-of-type {
+    text-align: left;
+    padding-left: 0.5em;
+	}

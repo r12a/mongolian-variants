@@ -153,7 +153,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
       </p>
     </form>
     <form onchange="showComparisonLists(this.reflists.value); return false;">
-      <p style="cursor:pointer;">Q and TUS9 columns<br/>
+      <p style="cursor:pointer;">Hidden columns<br/>
         <label>
           <input type="radio" value="show" name="reflists"/>
           show</label>
@@ -167,24 +167,33 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
 <p id="status">Updated Thu 24 Nov  2016  &bull; tags <a href="http://rishida.net/blog/index.php?tag=mongolian" title="Show all blog posts tagged with 'mongolian'">mongolian</a>, <a href="http://rishida.net/blog/?tag=scriptnotes" title="Show all blog posts tagged with 'scriptnotes'">scriptnotes</a></p>
 <section>
   <p>This page shows the latest proposed shapes for positional and variant forms of Mongolian characters and what the major fonts currently produce.</p>
-  <p>There is some confusion about which shapes fonts should  produce for Mongolian characters when combined with Free Variation Selectors (FVS), and sometimes also when not. Most letters have at least one isolated, initial, medial and final shape, but other shapes are produced by contextual factors, such as vowel harmony. Free variation selectors allow you to produce specific shapes regardless of rules in fonts or rendering software.</p>
+  <p>There is some confusion about which shapes fonts should  produce for Mongolian characters when combined with  variation selectors, and sometimes also when not. Most letters have at least one isolated, initial, medial and final shape, but other shapes are produced by contextual factors, such as vowel harmony. Free variation selectors allow you to produce specific shapes regardless of rules in fonts or rendering software.</p>
   <p>The other factor in this is what the actual fonts do. Sometimes they follow the Unicode standardised variants list, other times they diverge from it. Occasionally a majority of implementations appear to diverge in the same way, suggesting that the standardised list should be adapted to reality. </p>
-  <h3>Background</h3>
+  
+  <h3>Detailed information</h3>
+  <details>
+  <summary><strong>Background</strong></summary>
+  
   <p>Unicode <strong></strong>has a <a href="http://www.unicode.org/Public/UNIDATA/StandardizedVariants.html">list of standardised variant shapes</a>, dating from 27 November 2013, but that list is not complete and contains what are currently viewed by some as errors.</p>
   <p>A <a href="http://www.unicode.org/L2/L2014/14031-mong-chart-upd.pdf">new proposal (L2/14-031)</a> was published on 20 January 2014, which attempted to resolve the current issues. The data in the <samp>DS01</samp> columns in this document is derived from <strong>significant revisions</strong> of that  proposal, arrived at through discussion with the major Mongolian font vendors and Mongolian script experts. <a href="https://w3c.github.io/mlreq/variants/ds01.pdf">The document called DS01</a> captures the results of that work and constitutes the newest set of proposals for Unicode.</p>
   <p>The  differences are being discussed by Mongolian experts on the public-i18n-mongolian list (see <a href="http://lists.w3.org/Archives/Public/public-i18n-mongolian/">the archive</a>). There is also a <a href="http://w3c.github.io/mlreq/variants/document-log.html">document log</a> for these discussions.</p>
   <p>This page also shows the <a href="http://www.unicode.org/L2/L2016/16309-mongolian-adds.pdf">recommendations of a proposal</a> following a meeting of Mongolian and Chinese experts with Greg Eck in October 2016, that builds on and integrates DS01 with new information. Differences between that proposal and the previous DS01 proposal are highlighted.</p>
-  <h3>How to use the document</h3>
+  </details>
+  
+  
+  <details>
+  <summary><strong>How to use the document</strong></summary>
   <p>For each Mongolian script letter, this page shows graphics to indicate the shape of the character in a given context (described in the left column). The graphics are standardised, and do not represent the actual font glyph shape produced by a particular font.</p>
   <p>Note that the large character in the box above the top left of each table is not a graphic, and the shape of the character shown depends on the font currently in use.</p>
   <h4>The <samp>DS01</samp> and <samp>WG2</samp> columns</h4>
   <p>The <samp>DS01</samp> column shows the proposals in the <a href="https://w3c.github.io/mlreq/variants/ds01.pdf">latest version of the DS01 document</a>, and includes consensus from discussions on public-i18n-mongolian@w3.org on what should be the result of a particular contextual or variant use of a character in the Mongolian script.</p>
   <p>The column <samp>WG2</samp> represents the proposals in  <cite><a href="http://www.unicode.org/L2/L2016/16309-mongolian-adds.pdf">L2/16-309, Proposed additions for Mongolian in 5th edition of UCS</a></cite> (26 October, 2016). </p>
-    <h4>Hidden<samp></samp> columns</h4>
-  <p>There are two additional columns, the  list of standardised variants proposed in <a href="http://www.babelstone.co.uk/Mongolian/MGWBM.html">蒙古文编码</a> by Professor Quejingzhabu in 2000, and updated after discussions with Professor Quejingzhabu in 2015. See <a href="http://www.babelstone.co.uk/Mongolian/Specification9.pdf">version 9.0 of his specification</a>.</p>
-  <p>The other column shows the information in the charts of <a href="http://www.unicode.org/charts/PDF/U1800.pdf">The Unicode Standard v9.0</a>.</p>
-  <p> To see these columns, click on the  blue vertical bar at the bottom right of the window, then select <samp>Show</samp> under <samp>Q and TUS9 columns</samp>.</p>
-<h4>The font columns</h4>
+  <h4>Hidden<samp></samp> columns</h4>
+  <p>There are two additional columns that are hidden by default.  To see these columns, click on the  blue vertical bar at the bottom right of the window, then select <samp>Show</samp> under <samp>Hidden columns</samp>.</p>
+  <p>The <samp>usage</samp> column indicates script usage (x<sub>1</sub>=Mongolian, x<sub>2</sub>=Todo, x<sub>3</sub>=Sibe, x<sub>4</sub>=Manchu); positional glyphs which show no  “x” at  all are to be understood as undefined (such glyphs at this  position are only the recommended form, not a required form).</p>
+  <!--p>The <samp>Q</samp> column lists standardised variants proposed in <a href="http://www.babelstone.co.uk/Mongolian/MGWBM.html">蒙古文编码</a> by Professor Quejingzhabu in 2000, and updated after discussions with Professor Quejingzhabu in 2015. See <a href="http://www.babelstone.co.uk/Mongolian/Specification9.pdf">version 9.0 of his specification</a>.</p-->
+  <p>The <samp>TUS9</samp> column shows the information in the charts of <a href="http://www.unicode.org/charts/PDF/U1800.pdf">The Unicode Standard v9.0</a>.</p>
+  <h4>The font columns</h4>
   <p>The columns to the right of the DS01 column indicate the shapes produced by various fonts. See below for a key to the abbreviations used.</p>
   <p>Character images are sometimes surrounded by a coloured border with the following meanings:</p>
   <ul>
@@ -206,9 +215,12 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
   <p>The CSS for the text column also attempts to apply <strong>vertical text orientation</strong> to the characters. In some Firefox  the resulting display may clip some glyphs. By clicking on the radio button in the font dialog box, you can change the direction to horizontal. This may resolve the display problem. The switch only works for Firefox and Chrome browsers.</p>
   <p>NOTE: The shapes shown as text will vary, depending on which operating system and which browser you are using. In particular,  I found a lot of issues with Internet Explorer 11 on Windows7 with the Mongolian Baiti font version 5.0.1. These issues appear to go away on Windows8 with the 5.4.1 version of the font. Also Safari on the Mac performs badly in nearly all cases. Chrome appears to work well on both Windows and OS X, but not on the iPad.</p>
   <p>I used Firefox on Mac OS X 10.10 for all results except those for Mongolian Baiti, for which I used Internet Explorer 11 on Windows8 with version 5.4.1 of the font. See above for issues with Firefox v38 and vertical display.</p>
-  <section id="abbrevs">
-    <h3>Abbreviations and fonts tested</h3>
-    <p><em>WG2</em>: <strong>Working Group 2 proposal</strong>, <strong>based on <cite><a href="http://www.unicode.org/L2/L2016/16309-mongolian-adds.pdf">L2/16-309, Proposed additions for Mongolian in 5th edition of UCS</a></cite> (26 October, 2016), which builds on DS01, and was produced during a meeting in Hohot.</p>
+  </details>
+  
+  
+<details>
+    <summary><strong>Abbreviations and fonts tested</strong></summary>
+    <p><em>WG2</em>: <strong>Working Group 2 proposal</strong>, based on <cite><a href="http://www.unicode.org/L2/L2016/16309-mongolian-adds.pdf">L2/16-309, Proposed additions for Mongolian in 5th edition of UCS</a></cite> (26 October, 2016), which builds on DS01, and was produced during a meeting in Hohot.</p>
     <p><em>DS01</em>: <strong>Summary of discussions contained in</strong><strong> <a href="https://w3c.github.io/mlreq/variants/ds01.pdf">the DS01 document</a></strong>, which is an update  to the Jan 2014 L2/14-031 proposal.  The information was supplied by Greg Eck and the aforementioned Mongolian script experts, and builds on work by him, Aaron Bell, and Andrew Glass.</p>
     <p><em>MB</em>: <strong>Mongolian Baiti</strong> font. This column shows results for two versions of Mongolian Baiti.  The base version is 5.51, in Edge on Windows 10. Where a cell contains two images, separated by  ≫ , the image to the right is for a pre-shipped version of Mongolian Baiti, which will be released in the future.</p>
     <p><em>FZ</em>: <strong>FangZhen</strong> font. Information provided by Greg Eck.</p>
@@ -221,7 +233,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
     <p><em>n/s</em>: not specified. FVSx is not specified for this sequence. The implication is that the glyph that appears here will most likely be the default glyph at the given code-point at the given position.</p>
     <p><em>Q</em>: <strong>Prof Quejingzhabu's</strong> document. In 2015, Greg Eck met with Professor Quejingzhabu, and as a result the shapes in the Q column were updated to reflect the Professor's latest thinking  as understood by Greg. In these cases, the shape shown is followed by an asterisk.</p>
     <p><em>TUS9</em>: Information in the <strong>Unicode Standard charts</strong> for version 9.0.</p>
-  </section>
+  </details>
 </section>
 <section id="charlistsection">
   <h2><a href="#charlistsection" id="characterlist">Index</a></h2>
@@ -272,7 +284,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
         <tbody>
           <tr>
             <th>form</th>
-            <th class="referencelists">Q</th>
+            <th class="referencelists">usage</th>
             <th class="referencelists">TUS9</th>
             <th>WG2</th>
             <th>DS01</th>
@@ -287,7 +299,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820s">
             <td>isolate</td>
-            <td class="referencelists"><img src="i/001.png" alt=""/></td>
+            <td class="referencelists">xxxx</td>
             <td class="referencelists"><img src="i/001.png" alt=""/></td>
             <td><img src="i/001.png" alt=""/></td>
             <td><img src="i/001.png" alt=""/></td>
@@ -302,7 +314,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820s1">
             <td>is+fvs1</td>
-            <td class="referencelists"><img src="i/015.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/015.png" alt=""/></td>
             <td><img src="i/015.png" alt=""/></td>
             <td><img src="i/015.png" alt=""/></td>
@@ -317,7 +329,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820s2">
             <td>is+fvs2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">_x__</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/016.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -335,7 +347,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820i">
             <td>initial</td>
-            <td class="referencelists"><img src="i/028.png" alt=""/></td>
+            <td class="referencelists">xxxx</td>
             <td class="referencelists"><img src="i/028.png" alt=""/></td>
             <td><img src="i/028.png" alt=""/></td>
             <td><img src="i/028.png" alt=""/></td>
@@ -350,7 +362,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820i1">
             <td class="agreed">in+fvs1</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">_x__</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/256.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -368,7 +380,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820m">
             <td>medial</td>
-            <td class="referencelists"><img src="i/032.png" alt=""/></td>
+            <td class="referencelists">xxxx</td>
             <td class="referencelists"><img src="i/032.png" alt=""/></td>
             <td><img src="i/032.png" alt=""/></td>
             <td><img src="i/032.png" alt=""/></td>
@@ -383,7 +395,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820m1">
             <td>m+fvs1</td>
-            <td class="referencelists"><img src="i/057.png" alt=""/></td>
+            <td class="referencelists">xx__</td>
             <td class="referencelists"><img src="i/025.png" alt="" class="conflict"/></td>
             <td><img src="i/057.png" alt=""/></td>
             <td><img src="i/057.png" alt=""/></td>
@@ -397,8 +409,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1820;&#x180B;&#x200D;</td>
           </tr>
           <tr id="1820m2">
-            <td class="agreed">m+fvs2</td>
-            <td class="referencelists"><img src="i/025.png" alt=""/></td>
+            <td class="agreed">m+fvs2 <sup>1</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/025.png" alt=""/></td>
             <td><img src="i/025.png" alt=""/></td>
             <td><img src="i/025.png" alt=""/></td>
@@ -413,7 +425,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820m3">
             <td>m+fvs3</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/350.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -428,7 +440,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820m4">
             <td>m+VS1</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/257.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -443,7 +455,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820m5">
             <td>m+VS2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/038.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -461,7 +473,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820f">
             <td>final</td>
-            <td class="referencelists"><img src="i/002.png" alt=""/></td>
+            <td class="referencelists">xxxx</td>
             <td class="referencelists"><img src="i/002.png" alt=""/></td>
             <td><img src="i/002.png" alt=""/></td>
             <td><img src="i/002.png" alt=""/></td>
@@ -475,8 +487,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1820;</td>
           </tr>
           <tr id="1820f1">
-            <td>f+fvs1</td>
-            <td class="referencelists"><img src="i/024.png" alt=""/></td>
+            <td>f+fvs1 <sup>2</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/024.png" alt=""/></td>
             <td><img src="i/024.png" alt=""/></td>
             <td><img src="i/024.png" alt=""/></td>
@@ -491,7 +503,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820f2">
             <td>f+fvs2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/098.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -506,7 +518,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820f3">
             <td>f+fvs3</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/258.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -521,7 +533,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820f4">
             <td>f+VS1</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/259.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -536,7 +548,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820f5">
             <td>f+VS2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/260.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -551,7 +563,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820f6">
             <td>f+VS3</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/261.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -566,7 +578,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1820f7">
             <td>f+VS4</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/262.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -583,6 +595,10 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
       </table>
       <div class="letter mongolian">
         <p><span class="title">Notes</span></p>
+        <p>1. <img src="i/025.png" alt=""/> only implemented with NNBSP.</p>
+        <p>2. <img src="i/024.png" alt=""/> only implemented with MVS or NNBSP.</p>
+          <details>
+    	<summary>Older notes</summary>
         <div class="rationale">
           <p><strong>Resolutions:</strong> </p>
           <p><b>initial+fvs1, medial+fvs2</b>: If the UTC accepts the change of position from medial to initial for the initial A in suffix ACA, then the impact is that there is a new VS at initial+fvs1 instead of the old one at medial+fvs2.</p>
@@ -591,6 +607,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
         <p> The glyph produced is the same as is produced for the suffix <img class="ex" lang="mn" src="images/aca.png" alt="ᠠᠴᠠ"/> for all the fonts tested.</p>
         <p>Notes from Greg Eck about m+fvs2: &quot;The only place where the single tooth initial 1820 is used is with the masculine ablative suffix . Given the standard NNBSP model, this is an initial position and not a medial position. My thoughts here are similar to the 1836 final situation – the spec called for a medial. Font implementers created the 1820 medial+fvs. The display at standalone produced the desired effect – you could view the single tooth initial. Implementation went on to test in context. The implementation did not work. The contextual implementation was placed at initial position. The fvs stand-alone display was left at the medial position resulting in a mis-match of the stand-alone with the contextual implementation. If this is correct, then I suggest that the medial+fvs2 spec be dropped and the initial+fvs1 spec be added for the single tooth initial <img src="i/025.png" alt=""/>.&quot;</p>
         <p>&quot;One more point that might be considered – if the ablative suffix ACA/ECE was indeed being processed in the medial position, then one would expect there to be a glyph for this at the 1821-E medial slot. There is none.&quot;</p>
+        </details>
       </div>
     </div>
   </div>
@@ -605,7 +622,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
         <tbody>
           <tr>
             <th>form</th>
-            <th class="referencelists">Q</th>
+            <th class="referencelists">usage</th>
             <th class="referencelists">TUS9</th>
             <th>WG2</th>
             <th>DS01</th>
@@ -620,7 +637,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr>
             <td id="1821s">isolate</td>
-            <td class="referencelists"><img src="i/015.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/015.png" alt=""/></td>
             <td><img src="i/015.png" alt=""/></td>
             <td><img src="i/015.png" alt=""/></td>
@@ -634,11 +651,11 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn"><div>&#x1821;&nbsp;</div></td>
           </tr>
           <tr>
-            <td colspan="14" class="vgap">&nbsp;</td>
+            <td colspan="15" class="vgap">&nbsp;</td>
           </tr>
           <tr id="1821i">
             <td>initial</td>
-            <td class="referencelists"><img src="i/025.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/025.png" alt=""/></td>
             <td><img src="i/025.png" alt=""/></td>
             <td><img src="i/025.png" alt=""/></td>
@@ -653,7 +670,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1821i1">
             <td>in+fvs1</td>
-            <td class="referencelists"><img src="i/028.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/028.png" alt=""/></td>
             <td><img src="i/028.png" alt=""/></td>
             <td><img src="i/028.png" alt=""/></td>
@@ -667,11 +684,11 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x1821;&#x180B;&#x200D;</td>
           </tr>
           <tr>
-            <td colspan="14" class="vgap">&nbsp;</td>
+            <td colspan="15" class="vgap">&nbsp;</td>
           </tr>
           <tr id="1821m">
             <td>medial</td>
-            <td class="referencelists"><img src="i/032.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/032.png" alt=""/></td>
             <td><img src="i/032.png" alt=""/></td>
             <td><img src="i/032.png" alt=""/></td>
@@ -685,8 +702,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1821;&#x200D;</td>
           </tr>
           <tr id="1821m1">
-            <td>m+fvs1</td>
-            <td class="referencelists">&nbsp;</td>
+            <td>m+fvs1 <sup>1</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/025.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -701,7 +718,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1821m2">
             <td>m+fvs2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/350.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -716,7 +733,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1821m3">
             <td>m+fvs3</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/257.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -731,7 +748,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1821m4">
             <td>m+VS1</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/038.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -745,11 +762,11 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1821;&#xFE00;&#x200D;</td>
           </tr>
           <tr>
-            <td colspan="14" class="vgap">&nbsp;</td>
+            <td colspan="15" class="vgap">&nbsp;</td>
           </tr>
           <tr id="1821f">
             <td>final</td>
-            <td class="referencelists"><img src="i/002.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/002.png" alt=""/></td>
             <td><img src="i/002.png" alt=""/></td>
             <td><img src="i/002.png" alt=""/></td>
@@ -763,8 +780,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1821;</td>
           </tr>
           <tr id="1821f1">
-            <td>f+fvs1</td>
-            <td class="referencelists"><img src="i/024.png" alt=""/></td>
+            <td>f+fvs1 <sup>2</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/024.png" alt=""/></td>
             <td><img src="i/024.png" alt=""/></td>
             <td><img src="i/024.png" alt=""/></td>
@@ -779,7 +796,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1821f2">
             <td>f+fvs2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/098.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -794,7 +811,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1821f3">
             <td>f+fvs3</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/258.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -809,7 +826,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1821f4">
             <td>f+VS1</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/259.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -824,7 +841,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1821f5">
             <td>f+VS2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/260.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -839,7 +856,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1821f6">
             <td>f+VS3</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/261.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -854,7 +871,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1821f7">
             <td>f+VS4</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/262.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -869,6 +886,11 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
         </tbody>
       </table>
+      <div class="letter mongolian">
+        <p><span class="title">Notes</span></p>
+        <p>1. <img src="i/025.png" alt=""/> only implemented with NNBSP.</p>
+        <p>2. <img src="i/024.png" alt=""/> only implemented with MVS or NNBSP.</p>
+      </div>
     </div>
   </div>
   <div class="character" id="char1822">
@@ -882,7 +904,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
         <tbody>
           <tr>
             <th>form</th>
-            <th class="referencelists">Q</th>
+            <th class="referencelists">usage</th>
             <th class="referencelists">TUS9</th>
             <th>WG2</th>
             <th>DS01</th>
@@ -897,7 +919,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1822s">
             <td>isolate</td>
-            <td class="referencelists"><img src="i/102.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/102.png" alt=""/></td>
             <td><img src="i/102.png" alt=""/></td>
             <td><img src="i/102.png" alt=""/></td>
@@ -911,11 +933,11 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn"><div>&#x1822;&nbsp;</div></td>
           </tr>
           <tr>
-            <td colspan="14" class="vgap">&nbsp;</td>
+            <td colspan="15" class="vgap">&nbsp;</td>
           </tr>
           <tr id="1822i">
             <td>initial</td>
-            <td class="referencelists"><img src="i/031.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/031.png" alt=""/></td>
             <td><img src="i/031.png" alt=""/></td>
             <td><img src="i/031.png" alt=""/></td>
@@ -929,11 +951,11 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x1822;&#x200D;</td>
           </tr>
           <tr>
-            <td colspan="14" class="vgap">&nbsp;</td>
+            <td colspan="15" class="vgap">&nbsp;</td>
           </tr>
           <tr id="1822m">
-            <td>medial</td>
-            <td class="referencelists"><img src="i/038.png" alt=""/></td>
+            <td>medial <sup>1</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/038.png" alt=""/></td>
             <td><img src="i/038.png" alt=""/></td>
             <td><img src="i/038.png" alt=""/></td>
@@ -948,7 +970,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1822m1">
             <td>m+fvs1</td>
-            <td class="referencelists"><img src="i/064.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/064.png" alt=""/></td>
             <td><img src="i/064.png" alt=""/></td>
             <td><img src="i/064.png" alt=""/></td>
@@ -962,8 +984,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1822;&#x180B;&#x200D;</td>
           </tr>
           <tr id="1822m2">
-            <td class="agreed">m+fvs2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="agreed">m+fvs2 <sup>3</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/065.png" alt=""/></td>
             <td><img src="i/065.png" alt=""/></td>
@@ -978,7 +1000,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1822m3">
             <td class="agreed">m+fvs3</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td>n/s</td>
             <td><img src="i/038.png" alt="" class="chstandard"/></td>
@@ -992,11 +1014,11 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1822;&#x180D;&#x200D;</td>
           </tr>
           <tr>
-            <td colspan="14" class="vgap">&nbsp;</td>
+            <td colspan="15" class="vgap">&nbsp;</td>
           </tr>
           <tr id="1822f">
-            <td>final</td>
-            <td class="referencelists"><img src="i/070.png" alt=""/></td>
+            <td>final <sup>1</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/070.png" alt=""/></td>
             <td><img src="i/070.png" alt=""/></td>
             <td><img src="i/070.png" alt=""/></td>
@@ -1010,8 +1032,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1822;</td>
           </tr>
           <tr id="1822f1">
-            <td class="agreed">f+fvs1</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="agreed">f+fvs1 <sup>2</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/263.png" alt="" class="chstandard"/></td>
             <td><img src="i/054.png" alt=""/></td>
@@ -1026,7 +1048,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1822f2">
             <td class="agreed">f+fvs2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/038.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -1043,7 +1065,12 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
       </table>
       <div class="letter mongolian">
         <p><span class="title">Notes</span></p>
-        <div class="rationale">
+        <p>1. <img src="i/038.png" alt=""/><img src="i/070.png" alt=""/> also implemented with NNBSP.</p>
+        <p>2. <img src="i/263.png" alt=""/> only implemented with NNBSP.</p>
+        <p>3. <img src="i/065.png" alt=""/> context driven.</p>
+          <details>
+    	<summary>Older notes</summary>
+       <div class="rationale">
           <p><strong>Resolutions:</strong></p>
           <ol>
             <li><b>isolate+fvs1</b>: Added to handle accusative suffix (post NNBSP).</li>
@@ -1053,6 +1080,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </ol>
         </div>
         <p>Bolorsoft lists two additional forms: f+fvs1 <img src="i/054.png" alt="">, used for "bi (meaning "I"), bui (meaning "is")", etc.; and f+fvs2 <img src="i/070.png" alt=""/>.</p>
+        </details>
       </div>
     </div>
   </div>
@@ -1067,7 +1095,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
         <tbody>
           <tr>
             <th>form</th>
-            <th class="referencelists">Q</th>
+            <th class="referencelists">usage</th>
             <th class="referencelists">TUS9</th>
             <th>WG2</th>
             <th>DS01</th>
@@ -1082,7 +1110,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1823s">
             <td>isolate</td>
-            <td class="referencelists"><img src="i/127.png" alt=""/></td>
+            <td class="referencelists">x_xx</td>
             <td class="referencelists"><img src="i/127.png" alt=""/></td>
             <td><img src="i/127.png" alt=""/></td>
             <td><img src="i/127.png" alt=""/></td>
@@ -1100,7 +1128,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1823i">
             <td>initial</td>
-            <td class="referencelists"><img src="i/264.png" alt=""/></td>
+            <td class="referencelists">x_xx</td>
             <td class="referencelists"><img src="i/264.png" alt=""/></td>
             <td><img src="i/264.png" alt=""/></td>
             <td><img src="i/264.png" alt=""/></td>
@@ -1118,7 +1146,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1823m">
             <td>medial</td>
-            <td class="referencelists"><img src="i/109.png" alt=""/></td>
+            <td class="referencelists">x_xx</td>
             <td class="referencelists"><img src="i/109.png" alt=""/></td>
             <td><img src="i/109.png" alt=""/></td>
             <td><img src="i/109.png" alt=""/></td>
@@ -1133,7 +1161,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1823m1">
             <td>m+fvs1</td>
-            <td class="referencelists"><img src="i/134.png" alt=""></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/134.png" alt=""></td>
             <td><img src="i/134.png" alt=""></td>
             <td><img src="i/134.png" alt=""></td>
@@ -1151,7 +1179,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1823f">
             <td>final</td>
-            <td class="referencelists"><img src="i/116.png" alt=""/></td>
+            <td class="referencelists">x_xx</td>
             <td class="referencelists"><img src="i/116.png" alt=""/></td>
             <td><img src="i/116.png" alt=""/></td>
             <td><img src="i/116.png" alt=""/></td>
@@ -1165,8 +1193,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1823;</td>
           </tr>
           <tr id="1823f1">
-            <td>f+fvs1</td>
-            <td class="referencelists"><img src="i/265.png" alt=""/></td>
+            <td>f+fvs1 <sup>1</sup></td>
+            <td class="referencelists">x_xx</td>
             <td class="referencelists"><img src="i/265.png" alt=""/></td>
             <td><img src="i/265.png" alt=""/></td>
             <td><img src="i/265.png" alt=""/></td>
@@ -1181,6 +1209,10 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
         </tbody>
       </table>
+      <div class="letter mongolian">
+        <p><span class="title">Notes</span></p>
+        <p>1. <img src="i/265.png" alt=""/> context driven.</p>
+      </div>
     </div>
   </div>
   <div class="character" id="char1824">
@@ -1195,7 +1227,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
         <tbody>
           <tr>
             <th>form</th>
-            <th class="referencelists">Q</th>
+            <th class="referencelists">usage</th>
             <th class="referencelists">TUS9</th>
             <th>WG2</th>
             <th>DS01</th>
@@ -1210,7 +1242,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1824s">
             <td class="agreed">isolate</td>
-            <td class="referencelists"><img src="i/127.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/127.png" alt=""/></td>
             <td><img src="i/127.png" alt=""/></td>
             <td><img src="i/127.png" alt=""/></td>
@@ -1225,7 +1257,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1824s1">
             <td class="agreed">is+fvs1</td>
-            <td class="referencelists"><img src="i/264.png" alt=""/></td>
+            <td class="referencelists">____</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/264.png" alt=""/></td>
             <td><img src="i/264.png" alt=""/></td>
@@ -1243,7 +1275,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1824i">
             <td>initial</td>
-            <td class="referencelists"><img src="i/264.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/264.png" alt=""/></td>
             <td><img src="i/264.png" alt=""/></td>
             <td><img src="i/264.png" alt=""/></td>
@@ -1261,7 +1293,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1824m">
             <td>medial</td>
-            <td class="referencelists"><img src="i/109.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/109.png" alt=""/></td>
             <td><img src="i/109.png" alt=""/></td>
             <td><img src="i/109.png" alt=""/></td>
@@ -1276,7 +1308,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1824m1">
             <td>m+fvs1</td>
-            <td class="referencelists"><img src="i/134.png" alt=""></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/134.png" alt=""></td>
             <td><img src="i/134.png" alt=""></td>
             <td><img src="i/134.png" alt=""></td>
@@ -1291,7 +1323,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1824m2">
             <td>m+fvs2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/266.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -1309,7 +1341,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1824f">
             <td>final</td>
-            <td class="referencelists"><img src="i/116.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/116.png" alt=""/></td>
             <td><img src="i/116.png" alt=""/></td>
             <td><img src="i/116.png" alt=""/></td>
@@ -1324,7 +1356,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1824f1">
             <td class="agreed">f+fvs1</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/265.png" alt=""/></td>
             <td><img src="i/265.png" alt=""/></td>
@@ -1339,7 +1371,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1824f2">
             <td class="agreed">f+fvs2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/267.png" alt=""></td>
             <td><img src="i/267.png" alt=""/></td>
@@ -1354,7 +1386,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1824f3">
             <td class="agreed">f+fvs3</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/351.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -1370,7 +1402,13 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
         </tbody>
       </table>
       <div class="letter mongolian">
-        <p><span class="title">Notes</span></p>
+        <p><span class="title">Notes</span></p>        
+        <p>1. <img src="i/109.png" alt=""/><img src="i/116.png" alt=""/><img src="i/267.png" alt=""> also implemented with NNBSP.</p>
+        <p>2. <img src="i/265.png" alt=""/> context driven.</p>
+
+        
+        <details>
+        <summary>Old notes</summary>
         <div class="rationale">
           <p><strong>Resolutions:</strong> </p>
           <ol>
@@ -1381,6 +1419,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </ol>
         </div>
         <p>The Bolorsoft table used for the BS column lists one additional form: f+fvs2 <img src="i/116.png" alt=""/>, where the glyph is the same as for the ordinary final form but should have absolutely no <span class="uname">NIRUGU</span>, and which is used for genitive case suffix. The non-variant final form has to have a small "nirugu".</p>
+        </details>
       </div>
     </div>
   </div>
@@ -1395,7 +1434,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
         <tbody>
           <tr>
             <th>form</th>
-            <th class="referencelists">Q</th>
+            <th class="referencelists">usage</th>
             <th class="referencelists">TUS9</th>
             <th>WG2</th>
             <th>DS01</th>
@@ -1410,7 +1449,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1825s">
             <td>isolate</td>
-            <td class="referencelists"><img src="i/132.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/132.png" alt=""/></td>
             <td><img src="i/132.png" alt=""/></td>
             <td><img src="i/132.png" alt=""/></td>
@@ -1425,7 +1464,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1825s1">
             <td>is+fvs1</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/107.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -1443,7 +1482,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1825i">
             <td>initial</td>
-            <td class="referencelists"><img src="i/133.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/133.png" alt=""/></td>
             <td><img src="i/133.png" alt=""/></td>
             <td><img src="i/133.png" alt=""/></td>
@@ -1458,7 +1497,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1825i1">
             <td>i+fvs1</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/264.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -1476,7 +1515,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1825m">
             <td>medial</td>
-            <td class="referencelists"><img src="i/109.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/109.png" alt=""/></td>
             <td><img src="i/109.png" alt=""/></td>
             <td><img src="i/109.png" alt=""/></td>
@@ -1490,8 +1529,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1825;&#x200D;</td>
           </tr>
           <tr id="1825m1">
-            <td>m+fvs1</td>
-            <td class="referencelists"><img src="i/139.png" alt=""/></td>
+            <td>m+fvs1 <sup>1</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/139.png" alt=""/></td>
             <td><img src="i/139.png" alt=""/></td>
             <td><img src="i/139.png" alt=""/></td>
@@ -1506,7 +1545,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1825m2">
             <td>m+fvs2</td>
-            <td class="referencelists"><img src="i/138.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/138.png" alt=""/></td>
             <td><img src="i/138.png" alt=""/></td>
             <td><img src="i/138.png" alt=""/></td>
@@ -1524,7 +1563,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1825f">
             <td>final</td>
-            <td class="referencelists"><img src="i/116.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/116.png" alt=""/></td>
             <td><img src="i/116.png" alt=""/></td>
             <td><img src="i/116.png" alt=""/></td>
@@ -1539,7 +1578,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1825f1">
             <td>f+fvs1</td>
-            <td class="referencelists"><img src="i/141.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/141.png" alt=""/></td>
             <td><img src="i/141.png" alt=""/></td>
             <td><img src="i/141.png" alt=""/></td>
@@ -1554,7 +1593,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1825f2">
             <td>f+fvs2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/351.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -1569,6 +1608,10 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
         </tbody>
       </table>
+      <div class="letter mongolian">
+        <p><span class="title">Notes</span></p>
+        <p>1. <img src="i/139.png" alt=""/> context driven.</p>
+      </div>
     </div>
   </div>
   <div class="character" id="char1826">
@@ -1584,7 +1627,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
         <tbody>
           <tr>
             <th>form</th>
-            <th class="referencelists">Q</th>
+            <th class="referencelists">usage</th>
             <th class="referencelists">TUS9</th>
             <th>WG2</th>
             <th>DS01</th>
@@ -1599,7 +1642,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1826s">
             <td class="agreed">isolate</td>
-            <td class="referencelists"><img src="i/132.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/132.png" alt=""/></td>
             <td><img src="i/132.png" alt=""/></td>
             <td><img src="i/132.png" alt=""/></td>
@@ -1614,7 +1657,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1826s1">
             <td class="agreed">is+fvs1</td>
-            <td class="referencelists"><img src="i/107.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/107.png" alt=""/></td>
             <td><img src="i/107.png" alt=""/></td>
             <td><img src="i/107.png" alt=""/></td>
@@ -1629,7 +1672,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1826s2">
             <td class="agreed">is+fvs2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">____</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/133.png" alt=""/></td>
             <td><img src="i/133.png" alt=""/></td>
@@ -1647,7 +1690,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1826i">
             <td>initial</td>
-            <td class="referencelists"><img src="i/133.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/133.png" alt=""/></td>
             <td><img src="i/133.png" alt=""/></td>
             <td><img src="i/133.png" alt=""/></td>
@@ -1662,7 +1705,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1826i1">
             <td>i+fvs1</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/264.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -1679,8 +1722,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td colspan="15" class="vgap">&nbsp;</td>
           </tr>
           <tr id="1826m">
-            <td>medial</td>
-            <td class="referencelists"><img src="i/109.png" alt=""/></td>
+            <td>medial <sup>1</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/109.png" alt=""/></td>
             <td><img src="i/109.png" alt=""/></td>
             <td><img src="i/109.png" alt=""/></td>
@@ -1694,8 +1737,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1826;&#x200D;</td>
           </tr>
           <tr id="1826m1">
-            <td>m+fvs1</td>
-            <td class="referencelists"><img src="i/139.png" alt=""/></td>
+            <td>m+fvs1 <sup>2</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/139.png" alt=""/></td>
             <td><img src="i/139.png" alt=""/></td>
             <td><img src="i/139.png" alt=""/></td>
@@ -1710,7 +1753,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1826m2">
             <td>m+fvs2</td>
-            <td class="referencelists"><img src="i/138.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/138.png" alt=""/></td>
             <td><img src="i/138.png" alt=""/></td>
             <td><img src="i/138.png" alt=""/></td>
@@ -1725,7 +1768,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1826m3">
             <td class="agreed">m+fvs3</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/266.png" alt="" class="chstandard"/></td>
             <td><img src="i/109.png" alt=""/></td>
@@ -1742,8 +1785,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td colspan="15" class="vgap">&nbsp;</td>
           </tr>
           <tr id="1826f">
-            <td>final</td>
-            <td class="referencelists"><img src="i/116.png" alt=""/></td>
+            <td>final <sup>1</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/116.png" alt=""/></td>
             <td><img src="i/116.png" alt=""/></td>
             <td><img src="i/116.png" alt=""/></td>
@@ -1758,7 +1801,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1826f1">
             <td>f+fvs1</td>
-            <td class="referencelists"><img src="i/141.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/141.png" alt=""/></td>
             <td><img src="i/141.png" alt=""/></td>
             <td><img src="i/141.png" alt=""/></td>
@@ -1772,8 +1815,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1826;&#x180B;</td>
           </tr>
           <tr id="1826f2">
-            <td class="agreed">f+fvs2</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="agreed">f+fvs2 <sup>1</sup></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/267.png" alt=""/></td>
             <td><img src="i/267.png" alt=""/></td>
@@ -1788,7 +1831,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1826f3">
             <td class="agreed">f+fvs3</td>
-            <td class="referencelists">&nbsp;</td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/351.png" alt="" class="chstandard"/></td>
             <td>n/s</td>
@@ -1805,6 +1848,10 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
       </table>
       <div class="letter mongolian">
         <p><span class="title">Notes</span></p>
+        <p>1. <img src="i/109.png" alt=""/><img src="i/116.png" alt=""/><img src="i/267.png" alt=""> also implemented with NNBSP.</p>
+        <p>2. <img src="i/139.png" alt=""/> context driven.</p>
+<details>
+<summary>Old notes</summary>
         <div class="rationale">
           <p><strong>Resolutions:</strong></p>
           <ol>
@@ -1815,6 +1862,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </ol>
         </div>
         <p>The Bolorsoft table used for the BS column lists three additional forms: i+fvs1 <img src="i/264.png" alt=""/>, and f+fvs2 and f+fvs3. Both  the latter two look the same as  the ordinary final,<img src="i/116.png" alt=""/>. The third form is reserved for "khalkha" form, and could be simply ignored.</p>
+        </details>
       </div>
     </div>
   </div>
@@ -1827,7 +1875,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
         <tbody>
           <tr>
             <th>form</th>
-            <th class="referencelists">Q</th>
+            <th class="referencelists">usage</th>
             <th class="referencelists">TUS9</th>
             <th>WG2</th>
             <th>DS01</th>
@@ -1842,7 +1890,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1827s">
             <td>isolate</td>
-            <td class="referencelists"><img src="i/151.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists"><img src="i/151.png" alt=""/></td>
             <td><img src="i/151.png" alt=""/></td>
             <td><img src="i/151.png" alt=""/></td>
@@ -1857,7 +1905,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1827i">
             <td>initial</td>
-            <td class="referencelists"><img src="i/150.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/150.png" alt=""/></td>
             <td><img src="i/150.png" alt=""/></td>
@@ -1872,7 +1920,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1827m">
             <td>medial</td>
-            <td class="referencelists"><img src="i/143.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/143.png" alt=""/></td>
             <td><img src="i/143.png" alt=""/></td>
@@ -1887,7 +1935,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
           </tr>
           <tr id="1827f">
             <td>final</td>
-            <td class="referencelists"><img src="i/145.png" alt=""/></td>
+            <td class="referencelists">x___</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/145.png" alt=""/></td>
             <td><img src="i/145.png" alt=""/></td>
@@ -1904,7 +1952,10 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
       </table>
       <div class="letter mongolian">
         <p><span class="title">Notes</span></p>
+        <details>
+        <summary>Old notes</summary>
         <p>The Bolorsoft table used for the BS column lists one additional form: m+fvs1, but it looks the same as  the ordinary medial, <img src="i/143.png" alt=""/> .</p>
+        </details>
       </div>
     </div>
   </div>
@@ -15771,7 +15822,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
 </section>
 <div id="panel" style="display:none"></div>
 <div class="smallprint"><span id="version">First published  21 Sep 2014.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2016-11-24  22:11<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2016-11-25  11:15<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
   
 <script type="text/javascript">
