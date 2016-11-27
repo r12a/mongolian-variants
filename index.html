@@ -199,7 +199,8 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
   <ul>
     <li><span class="conflict">brown</span> or <span class="chstandard">magenta</span> in the TUS9 columns: a character is shown, and it doesn't match the shape  in either of the WG2 or DS01 columns.</li>
     <li><span class="chstandard">magenta</span> in the WG2 column or the DS01 column: the proposal in L2/16-309 is different from the latest proposal in DS01.</li>
-    <li><span class="fconflict">orange</span> in the font columns: the shape produced for the font in question in that context doesn't match at least one of the latest proposals (usually DS01).</li>
+    <li><p><span class="fconflict">orange</span> in the font columns: the shape produced for the font in question in that context doesn't match at least one of the latest proposals (usually DS01).</p>
+    <p><strong>NOTE:</strong> blank spaces in a font cell indicate that the font uses the default isolate, initial, medial or final shape, <strong>ie. that it does not match the shapes of the proposal columns to the left</strong>. (In some cases, however, those default shapes have been explicitly added in these cells, particularly where most of the row is full.)</p></li>
     <li><span class="okdiff">green</span> in the font columns: although the glyph shape differs from the latest proposal, the glyph choice is thought to be a design decision because the letter is not actually used in a particular position, and the difference is probably not an issue.</li>
     <li><span>grey</span> in the font columns: FVS mismatch.</li>
   </ul>
@@ -222,17 +223,15 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
     <summary><strong>Abbreviations and fonts tested</strong></summary>
     <p><em>WG2</em>: <strong>Working Group 2 proposal</strong>, based on <cite><a href="http://www.unicode.org/L2/L2016/16309-mongolian-adds.pdf">L2/16-309, Proposed additions for Mongolian in 5th edition of UCS</a></cite> (26 October, 2016), which builds on DS01, and was produced during a meeting in Hohot.</p>
     <p><em>DS01</em>: <strong>Summary of discussions contained in</strong><strong> <a href="https://w3c.github.io/mlreq/variants/ds01.pdf">the DS01 document</a></strong>, which is an update  to the Jan 2014 L2/14-031 proposal.  The information was supplied by Greg Eck and the aforementioned Mongolian script experts, and builds on work by him, Aaron Bell, and Andrew Glass.</p>
-    <p><em>MB</em>: <strong>Mongolian Baiti</strong> font. This column shows results for two versions of Mongolian Baiti.  The base version is 5.51, in Edge on Windows 10. Where a cell contains two images, separated by  ≫ , the image to the right is for a pre-shipped version of Mongolian Baiti, which will be released in the future.</p>
-    <p><em>FZ</em>: <strong>FangZhen</strong> font. Information provided by Greg Eck.</p>
-    <p><em>NSM</em>: <strong>Noto Sans Mongolian</strong> font</p>
-    <p><em>MWc</em>: the <strong>Mongolian Universal White</strong> font. This column also represents a collection of fonts from the same Almas source that all behave in the same way, including the following: <strong>Mongolian White</strong>, <strong>Mongolian Writing</strong>, <strong>Mongolian Title</strong>, <strong>Mongolian Art</strong>.  The Mongolian White font  provides only an isolate glyph for Todo, Sibe, Manchu or Ali Gali variants. The other fonts in the group do not cover these ranges at all. In the rare cases where the Mongolian White font produces a different glyph than the Mongolian Universal White, the table cell contains the former, then   ≫, then the latter.</p>
-    <p><em>BS</em>: <strong>Bolorsoft</strong> font. This information was provided by Greg Eck and Badral Sanlig. This font does not provide more than an isolate glyph for Todo, Sibe, Manchu or Ali Gali variants, so most cells are left blank in these ranges. The table used to populate the BS column contained a few combinations that were not recorded for other fonts, although often the shape was the same as the form without FVS. Rather than create mostly empty new rows, those combinations are mentioned in notes after the table.</p>
+    <p><em>MB</em>: <strong>Mongolian Baiti</strong> font. This column shows results for two versions of Mongolian Baiti.  The base version is 5.52, in Edge on Windows 10. Where a cell contains two images, separated by  ≫ , the image to the right is for a pre-shipped version of Mongolian Baiti, which will be released in the future.</p>
+    <p><em>FZ</em>: <strong>FangZhen's</strong> font, FZMWBTOT_Uni, v1.00 in Firefox on Mac OS X v10.11.6.</p>
+    <p><em>NSM</em>: <strong>Noto Sans Mongolian</strong> font, v1.02 in Firefox on Mac OS X v10.11.6.</p>
+    <p><em>MWc</em>: the <strong>Mongolian Universal White</strong> font, v1.1.2015.418, in Firefox on Mac OS X v10.11.6. This column also represents a collection of fonts from the same Almas source that all behave in the same way, including the following: <strong>Mongolian White</strong>, <strong>Mongolian Writing</strong>, <strong>Mongolian Title</strong>, <strong>Mongolian Art</strong>.  The Mongolian White font  provides only an isolate glyph for Todo, Sibe, Manchu or Ali Gali variants. The other fonts in the group do not cover these ranges at all. In the rare cases where the Mongolian White font produces a different glyph than the Mongolian Universal White, the table cell contains the former, then   ≫, then the latter.</p>
+    <p><em>BS</em>: <strong>Bolorsoft</strong>'s MongolianScript font, v1.1, in Firefox on Mac OS X v10.11.6. This information was provided by Greg Eck and Badral Sanlig. This font does not provide more than an isolate glyph for Todo, Sibe, Manchu or Ali Gali variants, so most cells are left blank in these ranges. The table used to populate the BS column contained a few combinations that were not recorded for other fonts, although often the shape was the same as the form without FVS. Rather than create mostly empty new rows, those combinations are mentioned in notes after the table.</p>
     <p><em>MS</em>: <strong>Menksoft</strong> font. This information was provided by huqitu@163.com, and does not currently cover Sibe or Manchu sections.</p>
     <p><em>fvs</em>: <strong>Free variant selector.</strong></p>
     <p><em>is, in, m, f</em>: <strong>isolate, initial, medial, final, respectively.</strong></p>
     <p><em>n/s</em>: not specified. FVSx is not specified for this sequence. The implication is that the glyph that appears here will most likely be the default glyph at the given code-point at the given position.</p>
-    <p><em>Q</em>: <strong>Prof Quejingzhabu's</strong> document. In 2015, Greg Eck met with Professor Quejingzhabu, and as a result the shapes in the Q column were updated to reflect the Professor's latest thinking  as understood by Greg. In these cases, the shape shown is followed by an asterisk.</p>
-    <p><em>TUS9</em>: Information in the <strong>Unicode Standard charts</strong> for version 9.0.</p>
   </details>
 </section>
 <section id="charlistsection">
@@ -1377,11 +1376,11 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td><img src="i/267.png" alt=""/></td>
             <td class="gap">&nbsp;</td>
             <td><img src="i/116.png" alt=""/> ≫ <img src="i/267.png" alt=""></td>
-            <td><img src="i/116.png" alt="" class="fconflict"/></td>
-            <td><img src="i/116.png" alt="" class="fconflict"/></td>
-            <td><img src="i/116.png" alt="" class="fconflict"/></td>
-            <td><img src="i/116.png" alt="" class="fconflict"/></td>
-            <td><img src="i/question.png" alt="" class="fconflict"/></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>?</td>
             <td lang="mn">&#x200D;&#x1824;&#x180C;</td>
           </tr>
           <tr id="1824f3">
@@ -1778,7 +1777,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td><img src="i/109.png" alt=""/></td>
             <td><img src="i/109.png" alt=""/></td>
             <td><img src="i/109.png" alt=""/></td>
-            <td><img src="i/question.png" alt="" class="fconflict"/></td>
+            <td>?</td>
             <td lang="mn">&#x200D;&#x1826;&#x180D;&#x200D;</td>
           </tr>
           <tr>
@@ -1826,7 +1825,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td><img src="i/116.png" alt="" class="fconflict"/></td>
             <td><img src="i/267.png" alt=""/></td>
             <td><img src="i/116.png" alt="" class="fconflict"/></td>
-            <td><img src="i/question.png" alt="" class="fconflict"/></td>
+            <td>?</td>
             <td lang="mn">&#x200D;&#x1826;&#x180C;</td>
           </tr>
           <tr id="1826f3">
@@ -2761,7 +2760,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td><img src="i/081.png" alt="" class="chstandard"></td>
             <td>n/s</td>
             <td class="gap">&nbsp;</td>
-            <td><img src="i/089.png" alt="" class="fconflict"/></td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td><img src="i/066.png" alt="" class="fconflict"/></td>
@@ -3196,11 +3195,11 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td>n/s</td>
             <td class="gap">&nbsp;</td>
             <td><img src="i/008.png" alt=""/> ≫ <img src="i/007.png" alt=""/></td>
-            <td><img src="i/007.png" alt=""/></td>
-            <td><img src="i/007.png" alt=""/></td>
-            <td><img src="i/007.png" alt=""/></td>
-            <td><img src="i/007.png" alt=""/></td>
-            <td><img src="i/007.png" alt=""/></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td lang="mn">&#x200D;&#x182D;&#x180D;</td>
           </tr>
           <tr id="182Df4">
@@ -3837,7 +3836,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td><img src="i/046.png" alt=""/></td>
             <td><img src="i/046.png" alt=""/></td>
             <td class="gap">&nbsp;</td>
-            <td><img src="i/046.png" alt=""/></td>
+            <td><img src="i/190.png" alt="" class="fconflict"/></td>
             <td><img src="i/046.png" alt=""/></td>
             <td><img src="i/046.png" alt=""/></td>
             <td><img src="i/046.png" alt=""/></td>
@@ -10107,9 +10106,9 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td class="fvsmismatch">n/s</td>
             <td class="fvsmismatch">n/s</td>
             <td class="gap">&nbsp;</td>
-            <td><img src="i/194.png" alt=""></td>
-            <td><img src="i/190.png" alt=""></td>
-            <td><img src="i/194.png" alt=""></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             <td><img src="i/194.png" alt=""></td>
             <td>&nbsp;</td>
             <td lang="mn">&#x1868;&#x180B;</td>
@@ -11340,8 +11339,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
     <div class="up"><a href="#index">⇧</a></div>
     <div class="charimg">ᡴ</div>
     <p class="charname"><strong>U+1874</strong> <a href="/uniview/?char=1874">MONGOLIAN LETTER MANCHU KA</a></p>
-    <p class="subtitle">Description in the Unicode standard:</p>
-    <div class="unicodenotes">Unicode presentation form is <img src="i/008.png" alt=""></div>
+    <p>Unicode presentation form is <img src="i/008.png" alt=""></p>
     <div class="notes">
       <table class="formtable">
         <tbody>
@@ -11563,6 +11561,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
     <div class="up"><a href="#index">⇧</a></div>
     <div class="charimg">ᡵ</div>
     <p class="charname"><strong>U+1875</strong> <a href="/uniview/?char=1875">MONGOLIAN LETTER MANCHU RA</a></p>
+    <p>Unicode presentation form is <img src="i/055.png" alt=""></p>
     <div class="notes">
       <table class="formtable">
         <tbody>
@@ -12356,7 +12355,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td><img src="i/024.png" alt="" class="chstandard"></td>
             <td><img src="i/018.png" alt=""></td>
             <td class="gap">&nbsp;</td>
-            <td><img src="i/253.png" alt="" class="fconflict"></td>
+            <td>&nbsp;</td>
             <td><img src="i/018.png" alt=""></td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -15844,7 +15843,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
 </section>
 <div id="panel" style="display:none"></div>
 <div class="smallprint"><span id="version">First published  21 Sep 2014.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2016-11-27  17:10<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2016-11-27  19:06<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
   
 <script type="text/javascript">
