@@ -198,25 +198,24 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
   <p>The columns to the right of the DS01 column indicate the shapes produced by various fonts. See below for a key to the abbreviations used.</p>
   <p>Character images are sometimes surrounded by a coloured border with the following meanings:</p>
   <ul>
-    <li><span class="conflict">brown</span> or <span class="chstandard">magenta</span> in the TUS9 columns: a character is shown, and it doesn't match the shape  in either of the WG2 or DS01 columns.</li>
+    <li><!--span class="conflict">brown</span> or --><span class="chstandard">magenta</span> in the TUS9 columns: a shape is shown, and it doesn't match the shape  in either of the WG2 or DS01 columns.</li>
     <li><span class="chstandard">magenta</span> in the WG2 column or the DS01 column: the proposal in L2/16-309 is different from the latest proposal in DS01.</li>
-    <li><p><span class="fconflict">orange</span> in the font columns: the shape produced for the font in question in that context doesn't match at least one of the latest proposals (usually DS01).</p>
-    <p><strong>NOTE:</strong> blank spaces in a font cell indicate that the font uses the default isolate, initial, medial or final shape, <strong>ie. that it does not match the shapes of the proposal columns to the left</strong>. (In some cases, however, those default shapes have been explicitly added in these cells, particularly where most of the row is full.)</p></li>
+    <li>
+      <p><span class="fconflict">orange</span> in the font columns: the shape produced for the font in question in that context doesn't match at least one of the two proposals mentioned just above (usually DS01).</p>
+    <p><strong>NOTE:</strong> <span style="font-size: 120%;">blank spaces</span> in a font cell indicate that the font uses the default isolate, initial, medial or final shape, <strong>ie. that it does not match the shapes of the proposal columns to the left</strong>. (In some cases, however, those default shapes have been explicitly added in these cells, particularly where most of the row is full.)</p></li>
     <li><span class="okdiff">green</span> in the font columns: although the glyph shape differs from the latest proposal, the glyph choice is thought to be a design decision because the letter is not actually used in a particular position, and the difference is probably not an issue.</li>
-    <li><span>grey</span> in the font columns: FVS mismatch.</li>
+    <!--li><span>grey</span> in the font columns: FVS mismatch.</li-->
   </ul>
-  <p>To help spot divergences, the background of the left-most column is also coloured. It is <span style="background-color: #F6A355; color: white; font-weight: 500;">orange</span> if there are cells with orange borders but no brown. <strong>Where there are divergences but it is believed that agreement has been reached on a way forward, the left-hand column is coloured <span style="background-color: #6F9; color: gray; font-weight: 500;">green</span> and a description of the resolution is given in the notes  below the table.</strong> Where addition research is needed, the left-hand column is coloured <span style="background-color: #0ff; color: black; font-weight: 500;">blue</span>.</p>
+  <p><!--To help spot divergences, the background of the left-most column is also coloured. It is <span style="background-color: #F6A355; color: white; font-weight: 500;">orange</span> if there are cells with orange borders but no brown. --><strong>Where there are divergences but it is believed that agreement has been reached on a way forward <span style="font-size:110%;">per DS01</span> by the font vendors, the left-hand column is coloured <span style="background-color: #6F9; color: gray; font-weight: 500;">green</span> and a description of the resolution is given in the notes  below the table.</strong> Where addition research is needed, the left-hand column is coloured <span style="background-color: #0ff; color: black; font-weight: 500;">blue</span>.</p>
   <h4>The text column</h4>
   <p>The right-most column of the table contains characters to allow you to check what glyphs are produced by fonts to which you have access. </p>
-  <h4>Changing fonts and other display features</h4>
-  <p>As just mentioned, the right-most column of each table displays a mongolian character or sequence of characters so that you can see how your browser displays it.</p>
-  <p>You can change various parameters here, such as the font and font size, by using the controls behind the vertical blue line at the bottom right of the browser window. Click on the blue line to reveal or hide the controls.</p>
+  <h4>Changing fonts and other display features  </h4>
+  <p>Click on the vertical blue line at the bottom right of the browser window to reveal or hide  a set of option controls. You can change various parameters here, such as the font and font size of mongolian text on the page. </p>
   <p> When it is open, you can apply a specific font to the text in the right-hand column by selecting it from the top pull-down menu in this control panel. </p>
-  <p>If the font you want to test is not available in the list selector, click on 'Add a font to these lists' (found below the two list selectors in the control panel just mentioned) and <strong>enter the name of the font</strong> you want to add in the dialog box that appears. The font name will be added to the selection  controls. Open the top list selector again, and click on the name of the font to apply it to the text in the right column. (Fonts you add to a list selector only stay on the  list for the duration of the session.)</p>
-  <p>In the text column I use <span class="uname">U+200D   ZERO WIDTH JOINER</span> by default to establish the context for connecting characters. By clicking on the radio button in the font dialog box, you can <strong>change the connector</strong> to <span class="uname">U+180A MONGOLIAN NIRUGU</span>. </p>
-  <p>The CSS for the text column also attempts to apply <strong>vertical text orientation</strong> to the characters. In some Firefox  the resulting display may clip some glyphs. By clicking on the radio button in the font dialog box, you can change the direction to horizontal. This may resolve the display problem. The switch only works for Firefox and Chrome browsers.</p>
+  <p>If the font you want to test is not available in the list selector, click on <samp>Add a font to these lists</samp> (found below the two list selectors in the control panel just mentioned) and <strong>enter the name of the font</strong> you want to add in the dialog box that appears. The font name will be added to the selection  controls. Open the top list selector again, and click on the name of the font to apply it to the text in the right column. (Fonts you add to a list selector only stay on the  list for the duration of the session.)</p>
+  <p>In the text column I use <span class="uname">U+200D   ZERO WIDTH JOINER</span> by default to establish the context for connecting characters. By clicking on the <samp>Connectors</samp> radio button in the font dialog box, you can <strong>change the connector</strong> to <span class="uname">U+180A MONGOLIAN NIRUGU</span>. </p>
+  <p>The CSS for the text column also attempts to apply <strong>vertical text orientation</strong> to the characters. In some Firefox  the resulting display may clip some glyphs. By clicking on the <samp>Direction</samp> radio button in the font dialog box, you can change the direction to horizontal. This may resolve the display problem. The switch only works for Firefox and Chrome browsers.</p>
   <p>NOTE: The shapes shown as text will vary, depending on which operating system and which browser you are using. In particular,  I found a lot of issues with Internet Explorer 11 on Windows7 with the Mongolian Baiti font version 5.0.1. These issues appear to go away on Windows8 with the 5.4.1 version of the font. Also Safari on the Mac performs badly in nearly all cases. Chrome appears to work well on both Windows and OS X, but not on the iPad.</p>
-  <p>I used Firefox on Mac OS X 10.10 for all results except those for Mongolian Baiti, for which I used Internet Explorer 11 on Windows8 with version 5.4.1 of the font. See above for issues with Firefox v38 and vertical display.</p>
   </details>
   
   
@@ -616,7 +615,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
       <div class="letter mongolian">
         <p><span class="title">Notes</span></p>
         <details>
-          <summary>Older notes</summary>
+          <summary>Old notes</summary>
         <div class="rationale">
           <p><strong>Resolutions:</strong> </p>
           <p><b>initial+fvs1, medial+fvs2</b>: If the UTC accepts the change of position from medial to initial for the initial A in suffix ACA, then the impact is that there is a new VS at initial+fvs1 instead of the old one at medial+fvs2.</p>
@@ -1106,7 +1105,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
       <div class="letter mongolian">
         <p><span class="title">Notes</span></p>
         <details>
-          <summary>Older notes</summary>
+          <summary>Old notes</summary>
        <div class="rationale">
           <p><strong>Resolutions:</strong></p>
           <ol>
@@ -7662,7 +7661,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>Text</th>
           </tr>
           <tr id="184Fs">
-            <td class="fconflict">isolate</td>
+            <td>isolate</td>
             <td class="referencelists">-x--</td>
             <td class="referencelists">&nbsp;</td>
             <td class="referencelists"><img src="i/158.png" alt="" class="chstandard"></td>
@@ -8310,7 +8309,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td colspan="17" class="vgap">&nbsp;</td>
           </tr>
           <tr id="1855f">
-            <td class="fconflict">final</td>
+            <td>final</td>
             <td class="referencelists">-x--</td>
             <td class="referencelists">&nbsp;</td>
             <td class="referencelists">&nbsp;</td>
@@ -8669,7 +8668,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>Text</th>
           </tr>
           <tr id="1859s">
-            <td class="fconflict">isolate</td>
+            <td>isolate</td>
             <td class="referencelists">----</td>
             <td class="referencelists"><img src="i/231.png" alt="" class="chstandard"></td>
             <td><img src="i/232.png" alt=""></td>
@@ -10514,7 +10513,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x1868;</td>
           </tr>
           <tr id="1868s1">
-            <td class="research">is+fvs1</td>
+            <td>is+fvs1</td>
             <td class="referencelists">&nbsp;</td>
             <td class="referencelists">&nbsp;</td>
             <td class="referencelists">&nbsp;</td>
@@ -10532,7 +10531,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td colspan="20" class="vgap">&nbsp;</td>
           </tr>
           <tr id="1868i">
-            <td class="fconflict">initial</td>
+            <td>initial</td>
             <td class="referencelists">--xx</td>
             <td class="referencelists">&nbsp;</td>
             <td class="referencelists"><img src="i/194.png" alt=""></td>
@@ -10547,7 +10546,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x1868;&#x200D;</td>
           </tr>
           <tr id="1868i1">
-            <td class="fconflict">i+fvs1</td>
+            <td>i+fvs1</td>
             <td class="referencelists">--xx</td>
             <td class="referencelists colnote">contextual</td>
             <td class="referencelists"><img src="i/190.png" alt=""></td>
@@ -10565,7 +10564,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td colspan="20" class="vgap">&nbsp;</td>
           </tr>
           <tr id="1868m">
-            <td class="fconflict">medial</td>
+            <td>medial</td>
             <td class="referencelists">--xx</td>
             <td class="referencelists">&nbsp;</td>
             <td class="referencelists"><img src="i/051.png" alt=""></td>
@@ -10580,7 +10579,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1868;&#x200D;</td>
           </tr>
           <tr id="1868m1">
-            <td class="fconflict">m+fvs1</td>
+            <td>m+fvs1</td>
             <td class="referencelists">--xx</td>
             <td class="referencelists colnote">contextual</td>
             <td class="referencelists"><img src="i/046.png" alt=""></td>
@@ -10706,7 +10705,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td colspan="20" class="vgap">&nbsp;</td>
           </tr>
           <tr id="1869m">
-            <td class="fconflict">medial</td>
+            <td>medial</td>
             <td class="referencelists">--xx</td>
             <td class="referencelists">&nbsp;</td>
             <td class="referencelists"><img src="i/052.png" alt=""></td>
@@ -10721,7 +10720,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1869;&#x200D;</td>
           </tr>
           <tr id="1869m1">
-            <td class="fconflict">m+fvs1</td>
+            <td>m+fvs1</td>
             <td class="referencelists">--xx</td>
             <td class="referencelists colnote">contextual</td>
             <td class="referencelists"><img src="i/048.png" alt=""></td>
@@ -11523,7 +11522,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>Text</th>
           </tr>
           <tr id="1872s">
-            <td class="fconflict">isolate</td>
+            <td>isolate</td>
             <td class="referencelists">--x-</td>
             <td class="referencelists"><img src="i/042.png" alt=""></td>
             <td><img src="i/042.png" alt=""></td>
@@ -11551,7 +11550,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x1872;&#x200D;</td>
           </tr>
           <tr id="1872m">
-            <td class="fconflict">medial</td>
+            <td>medial</td>
             <td class="referencelists">--x-</td>
             <td class="referencelists">&nbsp;</td>
             <td><img src="i/042.png" alt=""></td>
@@ -11621,7 +11620,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>Text</th>
           </tr>
           <tr id="1873s">
-            <td class="fconflict">isolate</td>
+            <td>isolate</td>
             <td class="referencelists">---x</td>
             <td class="referencelists">&nbsp;</td>
             <td class="referencelists"><img src="i/065.png" alt="" class="chstandard"></td>
@@ -11762,7 +11761,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1873;&#x180C;</td>
           </tr>
           <tr id="1873f3">
-            <td class="research">f+fvs3</td>
+            <td>f+fvs3</td>
             <td class="referencelists">---x</td>
             <td class="referencelists colnote">&nbsp;</td>
             <td class="referencelists">&nbsp;</td>
@@ -11820,7 +11819,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>Text</th>
           </tr>
           <tr id="1874s">
-            <td class="fconflict">isolate</td>
+            <td>isolate</td>
             <td class="referencelists">----</td>
             <td class="referencelists colnote">&nbsp;</td>
             <td class="referencelists"><img src="i/008.png" alt="" class="chstandard"></td>
@@ -12144,7 +12143,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <th>Text</th>
           </tr>
           <tr id="1876s">
-            <td class="fconflict">isolate</td>
+            <td>isolate</td>
             <td class="referencelists">----</td>
             <td class="referencelists colnote">&nbsp;</td>
             <td class="referencelists"><img src="i/309.png" alt="" class="chstandard"></td>
@@ -12977,7 +12976,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x1888;&#x200D;</td>
           </tr>
           <tr id="1888m1">
-            <td class="fconflict">m+fvs1</td>
+            <td>m+fvs1</td>
             <td class="referencelists">&nbsp;</td>
             <td class="referencelists">&nbsp;</td>
             <td>n/s</td>
@@ -13246,7 +13245,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td colspan="22" class="vgap">&nbsp;</td>
           </tr>
           <tr id="188Af">
-            <td class="fconflict">final</td>
+            <td>final</td>
             <td class="referencelists">----</td>
             <td class="referencelists colnote">&nbsp;</td>
             <td class="referencelists"><img src="i/012.png" alt=""></td>
@@ -15419,7 +15418,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x18A0;&#x200D;</td>
           </tr>
           <tr id="18A0m1">
-            <td class="research">m+fvs1</td>
+            <td>m+fvs1</td>
             <td class="referencelists">---x</td>
             <td class="referencelists colnote">contextual</td>
             <td class="referencelists">&nbsp;</td>
@@ -15523,7 +15522,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x18A1;&#x200D;</td>
           </tr>
           <tr id="18A1i1">
-            <td class="research">i+fvs1</td>
+            <td>i+fvs1</td>
             <td class="referencelists">---x</td>
             <td class="referencelists colnote">contextual</td>
             <td class="referencelists">&nbsp;</td>
@@ -15558,7 +15557,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
             <td lang="mn">&#x200D;&#x18A1;&#x200D;</td>
           </tr>
           <tr id="18A1m1">
-            <td class="research">m+fvs1</td>
+            <td>m+fvs1</td>
             <td class="referencelists">---x</td>
             <td class="referencelists colnote">contextual</td>
             <td class="referencelists">&nbsp;</td>
@@ -16426,7 +16425,7 @@ onChange="setIndexFont(document.querySelector('#slfontswitchfont').value, this.v
 </section>
 <div id="panel" style="display:none"></div>
 <div class="smallprint"><span id="version">First published  21 Sep 2014.  This version <span id="version-info"> 
-  <!-- #BeginDate format:IS1m -->2016-11-28  14:41<!-- #EndDate --> 
+  <!-- #BeginDate format:IS1m -->2016-11-28  16:39<!-- #EndDate --> 
   </span> GMT. &nbsp;&bull;&nbsp; Copyright <a href="mailto:r12a@w3.org">r12a@w3.org</a>. Licence <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC-By</a>.</span></div>
   
 <script type="text/javascript">
