@@ -72,7 +72,7 @@ td.vright, th.vright {
 
 table.formtable { clear: both; }
 table td { background-color: white; }
-.formtable td { border: 1px solid #ddd; }
+.formtable td { border: 1px solid #ddd; vertical-align: middle; }
 .formtable td.gap { border: 0; }
 .formtable td.vgap { border: 0; line-height: 1; }
 .formtable th.gap { background-color: transparent; }
@@ -117,7 +117,7 @@ td.fvsmismatch { border: 3px solid #aaa; }
 
 .formtable td.referencelists {
 	display: none;
-	opacity: .3;
+	opacity: .5;
 	}
 .formtable th.referencelists {
 	display: none;
@@ -138,4 +138,8 @@ summary {
 .formtable td:first-of-type {
     text-align: left;
     padding-left: 0.5em;
+	}
+.colnote {
+	font-size: 80%;
+	text-align: start;
 	}
