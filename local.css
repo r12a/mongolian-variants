@@ -116,11 +116,11 @@ td.fvsmismatch { border: 3px solid #aaa; }
 	}
 
 .formtable td.referencelists {
-	display: none;
+	/*display: none;*/
 	opacity: .5;
 	}
 .formtable th.referencelists {
-	display: none;
+	/*display: none;*/
 	opacity: .3;
 	}
 summary {
