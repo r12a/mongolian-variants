@@ -70,13 +70,17 @@ td.vright, th.vright {
 	padding-left: 20px;
 	}
 
-table.formtable { clear: both; }
+table.formtable { clear: both; margin-left: 0; }
 table td { background-color: white; }
 .formtable td { border: 1px solid #ddd; vertical-align: middle; }
 .formtable td.gap { border: 0; }
 .formtable td.vgap { border: 0; line-height: 1; }
 .formtable th.gap { background-color: transparent; }
-.formtable th { text-align:center; }
+.formtable th { 
+	text-align:center;
+    vertical-align: bottom;
+    font-size: 60%;
+	}
 table.formtable td[lang='mn'] { 
 	color: black;
 	-moz-writing-mode: vertical-lr;
@@ -89,6 +93,9 @@ table.formtable td[lang='mn'] {
 	/*background-color: #FDFADF;*/
 	padding: 8px;
 	text-align: start;
+	line-height: 2;
+	margin: 0;
+	padding: 0;
 	}
 .gap { border: 0; width: 10px; background-color: #FDFADF;  }
 .vgap { border: 0; height: 10px; background-color: #FDFADF;  }
@@ -117,11 +124,11 @@ td.fvsmismatch { border: 3px solid #aaa; }
 
 .formtable td.referencelists {
 	/*display: none;*/
-	opacity: .5;
+	opacity: 1;
 	}
 .formtable th.referencelists {
 	/*display: none;*/
-	opacity: .3;
+	opacity: 1;
 	}
 summary {
     margin-left: 7.5%;
@@ -143,3 +150,21 @@ summary {
 	font-size: 80%;
 	text-align: start;
 	}
+
+.additional { /* styles DSO1 and Chinese rows */
+	color: tan;
+	}
+table.formtable tr.additional [lang="mn"] {
+    color: tan;
+	}
+
+.wg2, .ds01 { /* styles DSO1 and Chinese rows */
+	opacity: .3;
+	}
+
+
+
+
+
+
+
